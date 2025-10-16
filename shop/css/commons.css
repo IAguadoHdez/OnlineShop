@@ -1,0 +1,118 @@
+:root {
+    --background: #0d0d0d;
+    --texto: #f5f5f5;
+    --texto_secundario: #737373;
+    --accent: #00c4cc;
+    --call-to-action: #ff4d00;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    color: var(--texto);
+}
+
+/* Header y nav */
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Tamaño logo y hover */
+header img {
+    width: 60px;
+}
+img[alt="logo"]:hover {
+    cursor: pointer;
+}
+
+/* Iconos */
+i {
+    color: var(--call-to-action);
+}
+i:hover {
+    cursor: pointer;
+}
+
+/* Menú deslizante */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--background);
+    transition: left 0.3s;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.menu-overlay.activo {
+    left: 0;
+}
+
+/* Botón de cierre */
+.menu-close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Enlaces del menú */
+.menu-links {
+    flex: 1;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu li a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+/* Botones de login y signup */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.menu-buttons a {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+}
+.btn-login {
+    background-color: var(--accent);
+    color: var(--background);
+}
+.btn-signup {
+    background-color: var(--call-to-action);
+    color: var(--texto);
+}
