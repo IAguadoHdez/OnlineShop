@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d0d0d;
+  --color-texto: #f5f5f5;
+  --color-textoSecundario: #737373;
+  --color-accent: #00c4cc;
+  --color-callToAction: #ff4d00;
+
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@layer components {
+
+  /* COMPONENTES PARA PODER USAR EL NAV DESPLEGABLE CON TAILWIND */
+  .menu-overlay {
+    @apply fixed top-0 left-[-250px] w-[250px] h-full bg-background transition-all duration-300 z-999 flex flex-col justify-between p-5;
+  }
+
+  .menu-overlay.activo {
+    @apply left-0;
+  }
+  .menu-close {
+    @apply flex justify-end mb-5 cursor-pointer;
+  }
+
+  .menu-links {
+    @apply flex-1;
+  }
+
+  .menu {
+    @apply list-none flex flex-col gap-3;
+  }
+
+  .nav-desplegable {
+       @apply  lg:invisible;
+    }
+    
+  /* Componente para los iconos  */
+  .icono {
+    @apply text-callToAction cursor-pointer hover:text-accent  transition ease-in;
+  }
+  /* Componente para reutilizacion de los links de la pagina */
+  .links {
+    @apply hover:text-accent;
+  }
+  /* Componente para reutilizacion de los botones de la pagina */
+  .buttons {
+    @apply bg-callToAction text-texto py-2 rounded-md font-semibold hover:bg-accent hover:text-background transition ease-in cursor-pointer;
+  }
+  /* Componente para reutilizacion de los inputs de texto de la pagina */
+  .inputs {
+    @apply text-texto placeholder-textoSecundario bg-transparent border border-[#333] focus:border-accent outline-none rounded-md w-full py-2 px-3 transition-all duration-200;
+  }
+
+  /* Componentes de tarjetas de producto (NO IMPLEMENTADO) */
+  .images-products-select {
+    @apply w-12 h-12 border border-texto rounded-xl hover:border-accent;
+  }
+}

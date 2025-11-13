@@ -19,9 +19,9 @@
     gap: 15px;
     overflow-x: auto; /*Esto hace que se muestre una barra para moverse si el contenido es más ancho que el contenedor mismo */
     scroll-snap-type: x mandatory; /*Esto hace que pase de elemento en elemento como en un carrusel normal  */
-    padding-bottom: 10px;
     border-bottom: 1px solid var(--accent);
     scroll-behavior: smooth; /* Como indica su nombre da suavidad al scroll horizontal */
+
 }
 
 
@@ -91,22 +91,14 @@
 .productos-header {
     display: flex;
     align-items: center;
-    padding: 0 15px;
-    margin-bottom: 10px;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .filter-btn {
     background-color: transparent;
-    color: var(--background);
     border: none;
-    border-radius: 20px;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    color: var(--call-to-action);
 }
 
 /* Tablet  */
@@ -188,6 +180,5 @@
     .productos-header h2 {
         order: 2;
     }
-
 }
 

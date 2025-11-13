@@ -9,37 +9,34 @@ $productoEliminado = ($id && $confirmado) ? eliminarProducto($id) : null;
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <title>Eliminar Producto</title>
 </head>
 
-<body class="bg-[#0D0D0D] flex items-center justify-center min-h-screen font-sans">
-    <div class="bg-[#1A1A1A] p-10 rounded-2xl shadow-2xl text-center max-w-md w-full mx-auto border border-[#737373]/30">
+<body class="bg-background flex items-center justify-center min-h-screen font-sans">
+    <div class="bg-[#1A1A1A] p-10 rounded-2xl shadow-2xl text-center max-w-md w-full mx-auto border border-textoSecundario/30">
 
-        <h1 class="text-2xl font-bold mb-6 text-[#F5F5F5]">
+        <h1 class="text-2xl font-bold mb-6 text-texto">
             <?= ($productoEliminado === true) ? "Producto eliminado" : (($id && !$confirmado) ? "Confirmar eliminación" : "No se pudo eliminar") ?>
         </h1>
 
-        <p class="mb-8 text-[#F5F5F5]">
+        <p class="mb-8 text-texto">
             <?= ($productoEliminado === true)
-                ? "El producto con ID <span class='text-[#00C4CC] font-semibold'>" . ($id) . "</span> se eliminó correctamente."
+                ? "El producto con ID <span class='text-accent font-semibold'>" . ($id) . "</span> se eliminó correctamente."
                 : (($id && !$confirmado)
-                    ? "¿Seguro que quieres borrar el producto con ID <span class='text-[#00C4CC] font-semibold'>" . ($id) . "</span>?"
-                    : "El producto con ID <span class='text-[#00C4CC] font-semibold'>" . ($id) . "</span> no existe o no se seleccionó correctamente.") ?>
+                    ? "¿Seguro que quieres borrar el producto con ID <span class='text-accent font-semibold'>" . ($id) . "</span>?"
+                    : "El producto con ID <span class='text-accent font-semibold'>" . ($id) . "</span> no existe o no se seleccionó correctamente.") ?>
         </p>
-
         <?= ($id && !$confirmado) ? '
         <form method="POST" class="flex justify-center gap-4">
             <input type="hidden" name="product_id" value="' . ($id) . '">
             <input type="hidden" name="confirmar" value="1">
-            <input type="submit" value="Aceptar" class="bg-[#FF4D00] text-[#F5F5F5] px-6 py-2 rounded-xl font-bold hover:bg-[#00C4CC] hover:text-[#0D0D0D] cursor-pointer transition-all duration-200">
-            <a href="../../index.php" class="bg-[#737373] text-[#F5F5F5] px-6 py-2 rounded-xl font-bold hover:bg-[#00C4CC] transition-all duration-200 cursor-pointer no-underline">Cancelar</a>
+            <input type="submit" value="Aceptar" class="buttons w-[100px]">
+            <a href="../../index.php" class="buttons w-[100px] bg-accent text-background hover:bg-callToAction hover:text-texto">Cancelar</a>
         </form>' : ''
         ?>
-
-        <a href="../../products.php" class="block mt-6 text-sm text-[#737373] hover:text-[#00C4CC] transition">← Volver atras</a>
+        <a href="../../products.php" class="block mt-6 text-sm text-textoSecundario hover:text-accent transition">← Volver atras</a>
     </div>
 </body>
 

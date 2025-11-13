@@ -1,30 +1,163 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elección</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-[#0d0d0d] text-[#F5F5F5] min-h-screen flex flex-col items-center">
-
-    <header class="mb-20">
-      <img 
-        src="/student002/shop/frontend/assets/images/logo.png" alt="Logo"class="w-24">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Destacados</title>
+    <link rel="stylesheet" href="./css/commons.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/46652c82d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <!--Navegador -->
+        <nav>
+            <div class="nav-desplegable">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </div>
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="shop_cart">
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-close">
+                    <i class="fa-solid fa-xmark fa-xl"></i>
+                </div>
+                <div class="menu-links">
+                    <ul class="menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="./views/products">Productos</a></li>
+                        <li><a href="./views/contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="menu-buttons">
+                    <a href="./backend/login.php" class="btn-login">Login</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main class="text-center">
-      <h1 class="text-3xl font-bold mb-10 text-[#FF4D00] tracking-wide">A donde vas?</h1>
-      
-      <div class="flex justify-center gap-6">
-        <a href="./frontend/index.html">
-          <button class="bg-[#FF4D00] text-[#F5F5F5] py-3 px-6 rounded-xl font-semibold shadow-md hover:bg-[#00C4CC] hover:text-[#0D0D0D] transition-all duration-300 w-32">FrontEnd</button>
-        </a>
+    
+    <main>
+        <!--Productos destacados y carrusel de productos -->
+        <div class="productosDestacadosCarrusel">
+            <h2 class="section-title">Destacados</h2>
+            <div class="productosDestacados">
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="./views/productDetail.html"><img src="./assets/images/products/product1.png" alt="Producto 1"></a>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Producto 1</h3>
+                        <div class="product-footer">
+                            <span class="product-price">$49.99</span>
+                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                        </div>
+                    </div>
+                </div>
 
-        <a href="./backend/index.php">
-          <button class="bg-[#FF4D00] text-[#F5F5F5] py-3 px-6 rounded-xl font-semibold shadow-md hover:bg-[#00C4CC] hover:text-[#0D0D0D] transition-all duration-300 w-32">BackEnd</button>
-        </a>
-      </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product2.png" alt="Producto 2">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Producto 2</h3>
+                        <div class="product-footer">
+                            <span class="product-price">$59.99</span>
+                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product3.png" alt="Producto 3">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Producto 2</h3>
+                        <div class="product-footer">
+                            <span class="product-price">$59.99</span>
+                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <!--Productos normales  y boton de filtros-->
+        <section class="productos-selector">
+            <div class="productos-header">
+                <h2 class="section-title">Más productos</h2>
+                <button class="fa-solid fa-filter fa-xl filter-btn"></button>
+            </div>
+        
+            <div class="productosNormales">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product4.png" alt="Producto 4">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Producto 1</h3>
+                        <div class="product-footer">
+                            <span class="product-price">$49.99</span>
+                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product5.png" alt="Producto 5">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Producto 2</h3>
+                        <div class="product-footer">
+                            <span class="product-price">$59.99</span>
+                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product6.png" alt="Producto 6">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Producto 3</h3>
+                        <div class="product-footer">
+                            <span class="product-price">$39.99</span>
+                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-  </body>
+    <!--Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="./assets/images/logo.png" alt="logo" class="footer-logo">
+                <p>&copy; 2025 Voltify. Todos los derechos reservados</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Aviso legal</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" class="fa-brands fa-x-twitter"></a>
+                <a href="#" class="fa-brands fa-instagram"></a>
+                <a href="#" class="fa-brands fa-facebook-f"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/commons.js"></script>
+</body>
 </html>

@@ -1,10 +1,7 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/db_connection.php'; 
 
-
 $sql = 'SELECT * 
             FROM products';
-
-
 
 $result = mysqli_query($connection, $sql);
 
@@ -17,4 +14,4 @@ foreach ($products as $product) {
 }
 
 ?>
-    <a href="../../index.php" class="block mt-6 text-sm text-[#737373] hover:text-[#00C4CC] transition ml-5 f">← Volver al inicio</a>
+    <a href="../../index.php" class="block mt-6 text-sm text-textoSecundario hover:text-accent transition ml-5 f">← Volver al inicio</a>

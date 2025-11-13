@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="../css/output.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/46652c82d3.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-background text-texto font-montserrat">
+  <header>
+    <nav class="flex flex-row justify-between items-center p-2.5 md:px-[60px] md:py-3">
+      <div class="nav-desplegable">
+        <i class="icono fa-solid fa-bars fa-xl"></i>
+      </div>
+      <div
+        class="logo w-16 h-16 bg-[url('/student002/shop/assets/images/logo.png')] bg-contain bg-no-repeat bg-center md:w-72 md:h-20 md:bg-[url('/student002/shop/assets/images/logoDesk.png')]">
+      </div>
+      <div class="hidden md:flex items-center justify-center flex-1 max-w-[500px] my-0 mx-5 relative">
+        <input type="text" placeholder="Buscar..." class="inputs" />
+        <button class="icono fa-solid fa-magnifying-glass absolute right-4"></button>
+      </div>
+      <div class="order-3">
+        <button class="icono fa-solid fa-bag-shopping fa-2xl"></button>
+      </div>
+      <div class="menu-overlay">
+        <div class="menu-close">
+          <button class="icono fa-solid fa-xmark fa-xl"></button>
+        </div>
+        <div class="menu-links">
+          <ul class="menu">
+            <li><a href="../index.html" class="links">Inicio</a></li>
+            <li><a href="./views/products" class="links">Productos</a></li>
+            <li><a href="./views/contact" class="links">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <a href="../backend/login.php"
+            class="bg-accent text-background py-2 px-6 items-center rounded-md hover:bg-callToAction transition ease-in font-bold">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contenedor-producto flex flex-col">
+      <div class="flex justify-center">
+        <h2 class="text-2xl font-bold">Portatil Lenovo</h2>
+      </div>
+      <div class="flex flex-col items-center mb-5">
+        <img src="../assets/images/products/product1.png" />
+        <div class=" flex flex-row gap-2 rounded-xl">
+          <img src="../assets/images/products/product1.png" class="images-products-select" />
+          <img src="../assets/images/products/product1.png" class="images-products-select" />
+          <img src="../assets/images/products/product1.png" class="images-products-select" />
+          <img src="../assets/images/products/product1.png" class="images-products-select" />
+          <img src="../assets/images/products/product1.png" class="images-products-select" />
+        </div>
+        <div class="justify-center text-sm">
+          <p>Equipo versátil y ligero, ideal para tareas diarias, estudio y oficina. Ofrece buen rendimiento, pantalla
+            clara y diseño compacto a un precio accesible.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <div class="flex justify-between items-center">
+          <div class="precio ml-4">
+            <span class="text-accent font-bold text-2xl">100€</span>
+          </div>
+          <div class="rating mr-4 flex">
+            <button class="fa-regular fa-star" id="rating1"></button>
+            <button class="fa-regular fa-star" id="rating2"></button>
+            <button class="fa-regular fa-star" id="rating3"></button>
+            <button class="fa-regular fa-star" id="rating4"></button>
+            <button class="fa-regular fa-star" id="rating5"></button>
+            <p>(0)</p>
+          </div>
+        </div>
+        <!-- 
+          Esto deberia hacerse con productos que tengan modelos o estilos 
+          <div class="flex items-center flex-col gap-2">
+            <h3>Seleccion de Modelo</h3>
+            <div class="estilosInput flex flex-row gap-3">
+              <input type="checkbox" name="color1" class="w-10 h-10" id="color1" />
+              <input type="checkbox" name="color2" class="w-10 h-10" id="color2" />
+              <input type="checkbox" name="color3" class="w-10 h-10" id="color3" />
+            </div>
+          </div> -->
+
+        <div class="flex justify-center items-center gap-2">
+          <button class="buttons w-[220px]">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="reviews flex flex-col gap-4 p-4">
+      <label class="font-bold text-xl text-center">Opiniones de Usuarios</label>
+      <!-- Tarjeta de review -->
+      <div class="review-card bg-[#2a2a2a] p-3 rounded-xl shadow-md flex flex-col gap-2">
+        <!-- Usuario y rating -->
+        <div class="flex items-center gap-2">
+          <img src="../assets/images/persona/persona.jpg" alt="Usuario"
+            class="w-10 h-10 rounded-full border-2 border-accent" />
+          <div class="flex items-center gap-1">
+            <button class="fa-solid fa-star text-sm" style="color: #ffd43b"></button>
+            <button class="fa-solid fa-star text-sm" style="color: #ffd43b"></button>
+            <button class="fa-solid fa-star text-sm" style="color: #ffd43b"></button>
+            <button class="fa-regular fa-star text-sm"></button>
+            <button class="fa-regular fa-star text-sm"></button>
+          </div>
+        </div>
+
+        <!-- Texto de la review ejemplo -->
+        <p class="text-texto text-sm ml-10">
+          Este producto es excelente, muy recomendable.
+        </p>
+
+        <!-- Input de añadir review -->
+        <div class="persona-review flex items-center gap-2 mt-1 ml-[42px]">
+          <input type="text" placeholder="Escribe tu opinión" class="inputs flex-1 text-sm py-2 px-3 rounded-md" />
+          <button class="fa-solid fa-circle-check fa-lg icono"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer-->
+  <footer class="bg-background text-texto py-7 px-5">
+    <div class="flex flex-col items-center text-center gap-2">
+      <div class="flex items-center">
+        <img src="../assets/images/logo.png" alt="logo" class="mb-2 w-[60px]" />
+        <p class="m-0 opacity-[0.8]">
+          &copy; 2025 Voltify. Todos los derechos reservados
+        </p>
+      </div>
+      <div class="flex gap-2">
+        <a href="#" class="decoration-0 opacity-[0.8] links">Aviso legal</a>
+        <a href="#" class="decoration-0 opacity-[0.8] links">Política de privacidad</a>
+        <a href="#" class="decoration-0 opacity-[0.8] links">Términos y condiciones</a>
+      </div>
+
+      <div class="flex justify-center gap-3 mt-2">
+        <a href="#" class="fa-brands fa-x-twitter icono"></a>
+        <a href="#" class="fa-brands fa-instagram icono"></a>
+        <a href="#" class="fa-brands fa-facebook-f icono"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/commons.js"></script>
+</body>
+
+</html>

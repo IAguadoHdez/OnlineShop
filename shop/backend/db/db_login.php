@@ -10,17 +10,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $query = $conn->prepare("SELECT customer_id, name, password FROM `002customers` WHERE email = ?");
     $query->bind_param("s", $email);
     $query->execute();
-    $user = $query->get_result()->fetch_assoc();
+    $result = $query->get_result();
+    $user = $result->fetch_assoc();
 
     // Validar usuario y contraseña
-    if ($user) {
+    if ($user && $password === $user['password']) {
         $_SESSION['user_name'] = $user['name'];
         $_SESSION['user_id'] = $user['customer_id'];
         header("Location: /student002/shop/backend/index.php");
         exit;
 
+    } else {
+        $error = "Correo o contraseña incorrectos";
+        header("Location: /student002/shop/backend/login.php");
     }
-    $error = "Correo o contraseña incorrectos";
+    
     
 }
 ?>

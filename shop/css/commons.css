@@ -8,9 +8,11 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
+    src: url(../assets/fonts/montserrat-regular.ttf);
 }
 
+
+/* General */
 * {
     margin: 0;
     padding: 0;
@@ -19,33 +21,40 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--background);
+    background-color: rgba(0,0,0,0.9);
     color: var(--texto);
 }
 
-/* Header y nav*/
+/* Header y nav */
 header nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
+/* Tamaño logo y hover */
 header img {
     width: 60px;
 }
-
-img[alt="logo"]:hover,
-i:hover {
+img[alt="logo"]:hover {
     cursor: pointer;
 }
-
+.logo {
+    width: 60px;
+    height: 60px;
+            background-image: url('/student002/shop/assets/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /* Iconos */
 i {
     color: var(--call-to-action);
 }
 
-/* Menú Overlay */
+
+/* Menú deslizante */
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -64,7 +73,6 @@ i {
     left: 0;
 }
 
-/* Botón de cierre */
 .menu-close {
     display: flex;
     justify-content: flex-end;
@@ -90,110 +98,221 @@ i {
 }
 
 /* Botones de login y signup */
-.menu-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 .menu-buttons a {
-    display: block;
     text-align: center;
-    padding: 10px 0;
-    border-radius: 6px;
+    padding: 8px 24px;
+    border-radius: 1rem;
     text-decoration: none;
-    font-size: 1rem;
+    display: block;
     font-weight: bold;
 }
+
 .btn-login {
     background-color: var(--accent);
     color: var(--background);
 }
-.btn-signup {
+
+.btn-login:hover {
     background-color: var(--call-to-action);
-    color: var(--texto);
+    transition: ease-in;
 }
 
-/*Footer*/
+/* Footer*/
 footer {
     background-color: var(--background);
-    color: var(--texto_secundario);
-    padding: 40px 20px 20px;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--texto);
+    padding: 30px 20px;
+    font-size: 0.95rem;
 }
-
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-}
-
-/* Logo y nombre */
-.footer-logo {
-    display: flex;
-    align-items: center;
+    text-align: center;
     gap: 10px;
 }
-.footer-logo img {
-    width: 50px;
+
+.footer-logo {
+    width: 60px;
+    margin-bottom: 10px;
 }
-.footer-name {
-    font-weight: bold;
+.footer-info p{
+    margin: 0;
+    opacity: 0.8;
+}
+.footer-links{
+    display: flex;
+    gap: 10px;
+}
+.footer-links a{
+    text-decoration: none;
+    opacity: 0.8;
     color: var(--texto);
 }
 
-/* Links footer */
-.footer-links {
-    list-style: none;
+.footer-socials{
     display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-.footer-links li a {
-    text-decoration: none;
-    color: var(--texto_secundario);
-    transition: color 0.3s;
-}
-.footer-links li a:hover {
-    color: var(--call-to-action);
-}
-
-/* Redes sociales */
-.footer-socials {
-    display: flex;
+    justify-content: center;
     gap: 15px;
+    margin-top: 10px;
+    
 }
+
 .footer-socials a {
+    text-decoration: none;
     color: var(--call-to-action);
-    font-size: 1.2rem;
-    transition: transform 0.3s;
-}
-.footer-socials a:hover {
-    transform: scale(1.2);
+    font-size: 1.3rem;
 }
 
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+.search-bar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
     }
 
-    .footer-links,
-    .footer-socials {
-        justify-content: center;
+    .search-bar input {
+        display: flex;
+        color: var(--color-texto);
+        background: transparent;
+        border: 1px solid #333;
+        outline:none;
+        width: 600px;
+        border-radius: 8px;
+        padding: 12px 8px;
+        transition: all;
+        transition-duration: 200ms;
+        font-family: 'Montserrat';
+        font-size: 15px;
     }
-}
-
 @media (min-width: 1025px) {
-    .btn-login:hover,
-    .btn-signup:hover {
+/* NAV DESKTOP */ 
+     nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 60px;
+        background-color: var(--background);
+        position: relative;
+    }
+
+    .nav-desplegable {
+        display: none;
+    }
+    
+    .logo {
+        width: 280px;
+        height: 80px;
+        background-image: url('/student002/shop/assets/images/logoDesk.png');
+    }
+
+    .menu-overlay{
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        left: auto;
+        transition: none;
+    }
+    .menu-close {
+        display: none;
+    }
+
+    .menu-links{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .menu li a{
+        font-size: 1rem;
+        padding: 0;
+        color: var(--texto);
+        text-decoration: none;
+        transition: color 0.2 ease;
+    }
+
+    .menu li a:hover {
+        color: var(--accent);
+    }
+
+    .menu-buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:15px;
+    }
+
+    .menu-buttons a {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+        border-radius: 6px;
+    }
+    .shop_cart {
+        order: 3;
+    }
+    .menu-toogle {
+        display: none;
+    }
+    .btn-login:hover, .btn-signup:hover{
         cursor: pointer;
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
+       transform: scale(1.05);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    i:hover {
+    cursor: pointer;
+    color: var(--accent);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+    }
+
+    .search-bar {
+        display: flex;
+    }
+
+    .search-bar input:focus {
+        border: 1px solid var(--accent);
+    }
+
+    /* FOOTER DESKTOP */ 
+    .footer-logo {
+        width: 70px;
+    }
+
+    .footer-links{
+        font-size: 1rem;
+    }
+
+    .footer-links a:hover {
+    color: var(--accent);
+    
+
+    }
+
+    .footer-socials a:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    color: var(--accent);
+    
+    }
+    .footer-info {
+        display: flex;
+        align-items: center;
     }
 }
