@@ -33,7 +33,7 @@
   }
 
   .nav-desplegable {
-       @apply  lg:invisible;
+       @apply  lg:hidden;
     }
     
   /* Componente para los iconos  */

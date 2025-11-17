@@ -11,19 +11,21 @@
 
 <body class="bg-background text-texto font-montserrat">
   <header>
-    <nav class="flex flex-row justify-between items-center p-2.5 md:px-[60px] md:py-3">
+    <nav class="flex flex-row justify-between items-center">
       <div class="nav-desplegable">
         <i class="icono fa-solid fa-bars fa-xl"></i>
       </div>
       <div
         class="logo w-16 h-16 bg-[url('/student002/shop/assets/images/logo.png')] bg-contain bg-no-repeat bg-center md:w-72 md:h-20 md:bg-[url('/student002/shop/assets/images/logoDesk.png')]">
       </div>
-      <div class="hidden md:flex items-center justify-center flex-1 max-w-[500px] my-0 mx-5 relative">
+      <div class="hidden md:flex items-center justify-center flex-1 max-w-[500px]">
+        <div class="border border-[#333] rounded py-2 px-2 border-r-0">
+          <i class="icono fa-solid fa-magnifying-glass "></i>
+        </div>
         <input type="text" placeholder="Buscar..." class="inputs" />
-        <button class="icono fa-solid fa-magnifying-glass absolute right-4"></button>
       </div>
       <div class="order-3">
-        <button class="icono fa-solid fa-bag-shopping fa-2xl"></button>
+        <button class="icono fa-solid fa-cart-shopping fa-2xl"></button>
       </div>
       <div class="menu-overlay">
         <div class="menu-close">
@@ -45,11 +47,9 @@
   </header>
 
   <main>
-    <div class="contenedor-producto flex flex-col">
-      <div class="flex justify-center items-center gap-2">
-        <h2 class="text-2xl font-bold">Portatil Lenovo</h2>
-      </div>
+    <div class="contenedor-producto flex flex-col lg:flex-row lg:border-b lg:border-textoSecundario">
       <div class="flex flex-col items-center mb-5 gap-2">
+        <h2 class="text-2xl font-bold lg:hidden">Portatil Lenovo</h2>
         <img src="../assets/images/products/product1.png" />
         <div class=" flex flex-row gap-2 rounded-xl ">
           <img src="../assets/images/products/product1.png" class="images-products-select" />
@@ -58,40 +58,51 @@
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
         </div>
-        <hr class=" mt-2 border border-b-accent w-[300px]">
-        <div class=" flex  flex-col text-sm text-center gap-2">
+        <hr class=" mt-2 border border-b-accent w-[300px] lg:border-none">
+      </div>
+      <div class="flex flex-col gap-5 lg:justify-center">
+        <div class="flex items-center gap-2 justify-start order-1">
+          <h2 class="text-2xl font-bold hidden lg:block">Portatil Lenovo</h2>
+          <div class="rating mr-4 lg:flex gap-1 text-sm hidden">
+            <p>4,2/5 </p>
+            <button class="fa-solid fa-star" style="color: #ffd43b" id="ratingGlobal"></button>
+          </div>
+        </div>
+        <div class=" flex  flex-col text-sm text-center gap-2 lg:order-4">
           <label class="text-xl">Descripción del producto </label>
           <p class="mx-2">Equipo versátil y ligero, ideal para tareas diarias, estudio y oficina. Ofrece buen
             rendimiento, pantalla
             clara y diseño compacto a un precio accesible.</p>
         </div>
-      </div>
-      <div class="flex flex-col gap-5">
-        <div class="flex justify-between items-center">
-          <div class="precio ml-4">
-            <span class="text-accent font-bold text-3xl ml-2">100.99€</span>
+        <div class="flex justify-between lg:justify-start items-center lg:order-2">
+          <div class=" hidden lg:flex precio ml-4 lg:m-0">
+            <span class="text-callToAction font-bold text-3xl ml-2">100.99€</span>
           </div>
-          <div class="rating mr-4 flex gap-1 text-sm">
+          <div class="rating mr-4 flex gap-1 text-sm lg:hidden">
             <p>4,2/5 </p>
             <button class="fa-solid fa-star" style="color: #ffd43b" id="ratingGlobal"></button>
           </div>
         </div>
-        <!-- 
-          Esto deberia hacerse con productos que tengan modelos o estilos 
-          <div class="flex items-center flex-col gap-2">
-            <h3>Seleccion de Modelo</h3>
-            <div class="estilosInput flex flex-row gap-3">
-              <input type="checkbox" name="color1" class="w-10 h-10" id="color1" />
-              <input type="checkbox" name="color2" class="w-10 h-10" id="color2" />
-              <input type="checkbox" name="color3" class="w-10 h-10" id="color3" />
-            </div>
-          </div> -->
 
-        <div class="flex justify-center items-center gap-2">
-          <button class="buttons w-[220px]">
-            <i class="fa-solid fa-cart-shopping fa-lg"></i>
-            Añadir al carrito
-          </button>
+        <div class="flex flex-row items-center gap-2 order-3 lg:justify-start">
+          <div class="border border-textoSecundario rounded p-2 text-center flex flex-col hover:border-accent gap-1">
+            <h4>Windows 11</h4>
+            <small class="text-callToAction">+110€</small>
+            <input type="radio" name="SO" id="SO" class="cursor-pointer">
+          </div>
+          <div class="border border-textoSecundario rounded px-7 py-2 text-center flex flex-col hover:border-accent gap-1">
+            <h4>Sin SO</h4>
+            <small class="text-callToAction">+0€</small>
+            <input type="radio" name="sinSO" id="noSO" class="cursor-pointer">
+          </div>
+        </div>
+
+        <div
+          class="bg-texto fixed w-full bottom-0 z-50 p-2 rounded-tl-2xl rounded-tr-2xl lg:flex lg:justify-center lg:items-center lg:gap-2 lg:static lg:bg-transparent lg:order-5">
+          <div class="flex justify-between">
+            <span class="text-callToAction font-bold text-3xl ml-2 lg:hidden">100.99€</span>
+            <button class="buttons w-[220px] md:w-[350px]"> Añadir al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -116,6 +127,31 @@
         <!-- Texto de la review ejemplo -->
         <p class="text-texto text-sm ml-10">
           Este producto es excelente, muy recomendable.
+        </p>
+
+        <!-- Input de añadir review -->
+        <div class="persona-review flex items-center gap-2 mt-1 ml-[42px]">
+          <input type="text" placeholder="Escribe tu opinión" class="inputs flex-1 text-sm py-2 px-3 rounded-md" />
+          <button class="fa-solid fa-circle-check fa-lg icono"></button>
+        </div>
+      </div>
+      <div class="review-card bg-[#2a2a2a] p-3 rounded-xl shadow-md flex flex-col gap-2">
+        <!-- Usuario y rating -->
+        <div class="flex items-center gap-2">
+          <img src="../assets/images/persona/persona.jpg" alt="Usuario"
+            class="w-10 h-10 rounded-full border-2 border-accent" />
+          <div class="flex items-center gap-1">
+            <button class="fa-solid fa-star text-sm" style="color: #ffd43b"></button>
+            <button class="fa-regular fa-star text-sm"></button>
+            <button class="fa-regular fa-star text-sm"></button>
+            <button class="fa-regular fa-star text-sm"></button>
+            <button class="fa-regular fa-star text-sm"></button>
+          </div>
+        </div>
+
+        <!-- Texto de la review ejemplo -->
+        <p class="text-texto text-sm ml-10">
+          Este producto es horrible , muy recomendable para no querer más, pero la foto esta guapa.
         </p>
 
         <!-- Input de añadir review -->
