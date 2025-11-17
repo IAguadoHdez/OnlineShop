@@ -46,35 +46,34 @@
 
   <main>
     <div class="contenedor-producto flex flex-col">
-      <div class="flex justify-center">
+      <div class="flex justify-center items-center gap-2">
         <h2 class="text-2xl font-bold">Portatil Lenovo</h2>
       </div>
-      <div class="flex flex-col items-center mb-5">
+      <div class="flex flex-col items-center mb-5 gap-2">
         <img src="../assets/images/products/product1.png" />
-        <div class=" flex flex-row gap-2 rounded-xl">
+        <div class=" flex flex-row gap-2 rounded-xl ">
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
         </div>
-        <div class="justify-center text-sm">
-          <p>Equipo versátil y ligero, ideal para tareas diarias, estudio y oficina. Ofrece buen rendimiento, pantalla
+        <hr class=" mt-2 border border-b-accent w-[300px]">
+        <div class=" flex  flex-col text-sm text-center gap-2">
+          <label class="text-xl">Descripción del producto </label>
+          <p class="mx-2">Equipo versátil y ligero, ideal para tareas diarias, estudio y oficina. Ofrece buen
+            rendimiento, pantalla
             clara y diseño compacto a un precio accesible.</p>
         </div>
       </div>
       <div class="flex flex-col gap-5">
         <div class="flex justify-between items-center">
           <div class="precio ml-4">
-            <span class="text-accent font-bold text-2xl">100€</span>
+            <span class="text-accent font-bold text-3xl ml-2">100.99€</span>
           </div>
-          <div class="rating mr-4 flex">
-            <button class="fa-regular fa-star" id="rating1"></button>
-            <button class="fa-regular fa-star" id="rating2"></button>
-            <button class="fa-regular fa-star" id="rating3"></button>
-            <button class="fa-regular fa-star" id="rating4"></button>
-            <button class="fa-regular fa-star" id="rating5"></button>
-            <p>(0)</p>
+          <div class="rating mr-4 flex gap-1 text-sm">
+            <p>4,2/5 </p>
+            <button class="fa-solid fa-star" style="color: #ffd43b" id="ratingGlobal"></button>
           </div>
         </div>
         <!-- 

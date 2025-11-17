@@ -46,7 +46,7 @@
   }
   /* Componente para reutilizacion de los botones de la pagina */
   .buttons {
-    @apply bg-callToAction text-texto py-2 rounded-md font-semibold hover:bg-accent hover:text-background transition ease-in cursor-pointer;
+    @apply bg-accent text-background py-2 rounded-md font-semibold hover:bg-callToAction hover:text-texto transition ease-in cursor-pointer;
   }
   /* Componente para reutilizacion de los inputs de texto de la pagina */
   .inputs {
