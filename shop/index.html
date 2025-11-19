@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/46652c82d3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <!--Navegador -->
@@ -18,9 +20,12 @@
             </div>
             <div class="logo"></div>
             <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Buscar...">
+                <div class="icon-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" placeholder="Search..."/>
             </div>
+
             <div class="shop_cart">
                 <i class="fa-solid fa-cart-shopping fa-2xl"></i>
             </div>
@@ -41,7 +46,7 @@
             </div>
         </nav>
     </header>
-    
+
     <main>
         <!--Productos destacados y carrusel de productos -->
         <div class="productosDestacadosCarrusel">
@@ -49,7 +54,8 @@
             <div class="productosDestacados">
                 <div class="product-card">
                     <div class="product-image">
-                        <a href="./views/productDetail.html"><img src="./assets/images/products/product1.png" alt="Producto 1"></a>
+                        <a href="./views/productDetail.html"><img src="./assets/images/products/product1.png"
+                                alt="Producto 1"></a>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Producto 1</h3>
@@ -85,7 +91,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
 
         <!--Productos normales  y boton de filtros-->
         <section class="productos-selector">
@@ -93,7 +99,7 @@
                 <h2 class="section-title">Más productos</h2>
                 <button class="fa-solid fa-filter fa-xl filter-btn"></button>
             </div>
-        
+
             <div class="productosNormales">
                 <div class="product-card">
                     <div class="product-image">
@@ -160,4 +166,5 @@
 
     <script src="./js/commons.js"></script>
 </body>
+
 </html>

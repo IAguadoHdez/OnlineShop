@@ -59,6 +59,6 @@
 
   /* Componentes de tarjetas de producto (NO IMPLEMENTADO) */
   .images-products-select {
-    @apply w-12 h-12 border border-texto rounded-xl hover:border-accent cursor-pointer;
+    @apply w-12 h-12 border border-texto rounded-xl  cursor-pointer hover:opacity-60 transition-opacity lg:w-18 lg:h-18;
   }
 }

@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 ?>
 
 
-<main class="flex justify-center items-center h-screen">
+<main class="flex justify-center items-center h-screen bg-[#1a1a1a]">
     <!-- No usamos el action para dejar procesar el codigo de php al navegador y hacemos el novalidate para que el HTML no se superponga a los errores que quiero poner yo-->
     <form method="POST" action="" novalidate class="flex flex-col gap-6 items-center justify-center bg-[#111111] border border-accent/60 rounded-2xl p-10 shadow-[0_0_15px_accent]/30 w-[350px]">
         <h2 class="text-3xl font-bold text-call-to-action">LOGIN</h2>
