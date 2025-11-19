@@ -4,29 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Voltify - Producto</title>
   <link href="../css/output.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/46652c82d3.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-background text-texto font-montserrat">
+
+  <!-- Header / Navegación -->
   <header>
-    <nav class="flex flex-row justify-between items-center">
+    <nav class="flex justify-between items-center p-2">
       <div class="nav-desplegable">
         <i class="icono fa-solid fa-bars fa-xl"></i>
       </div>
-      <div
-        class="logo w-16 h-16 bg-[url('/student002/shop/assets/images/logo.png')] bg-contain bg-no-repeat bg-center md:w-72 md:h-20 md:bg-[url('/student002/shop/assets/images/logoDesk.png')]">
-      </div>
+
+      <a href="../index.html">
+        <div class="logo w-16 h-16 bg-[url('/student002/shop/assets/images/logo.png')] bg-contain bg-no-repeat bg-center md:w-72 md:h-20 md:bg-[url('/student002/shop/assets/images/logoDesk.png')]"></div>
+      </a>
+
       <div class="hidden md:flex items-center justify-center flex-1 max-w-[500px]">
         <div class="border border-[#333] rounded py-2 px-2 border-r-0">
-          <i class="icono fa-solid fa-magnifying-glass "></i>
+          <i class="icono fa-solid fa-magnifying-glass"></i>
         </div>
         <input type="text" placeholder="Buscar..." class="inputs" />
       </div>
-      <div class="order-3">
+
+      <div class="order-3 mr-4">
         <button class="icono fa-solid fa-cart-shopping fa-2xl"></button>
       </div>
+
       <div class="menu-overlay">
         <div class="menu-close">
           <button class="icono fa-solid fa-xmark fa-xl"></button>
@@ -39,82 +45,97 @@
           </ul>
         </div>
         <div>
-          <a href="../backend/login.php"
-            class="bg-accent text-background py-2 px-6 items-center rounded-md hover:bg-callToAction transition ease-in font-bold">Login</a>
+          <a href="../backend/login.php"><button class="buttons py-1.5 px-5">Login</button></a>
         </div>
       </div>
     </nav>
   </header>
 
-  <main>
+  <!-- Main / Producto -->
+  <main class="bg-[#1a1a1a]">
     <div class="contenedor-producto flex flex-col lg:flex-row lg:border-b lg:border-textoSecundario">
+      
+      <!-- Imagen del producto -->
       <div class="flex flex-col items-center mb-5 gap-2">
-        <h2 class="text-2xl font-bold lg:hidden">Portatil Lenovo</h2>
-        <img src="../assets/images/products/product1.png" />
-        <div class=" flex flex-row gap-2 rounded-xl ">
+        <div class="flex flex-col items-center justify-center gap-2 mt-5">
+          <h2 class="text-2xl font-bold lg:hidden">Portatil Lenovo</h2>
+          <div class="rating mr-4 gap-1 text-sm flex lg:hidden">
+            <p>4,2/5</p>
+            <button class="fa-solid fa-star" style="color: #ffd43b" id="ratingGlobal"></button>
+            <a href="#reviews" class="links underline">Opiniones</a>
+          </div>
+        </div>
+
+        <img src="../assets/images/products/product1.png" alt="Portátil Lenovo" />
+
+        <div class="flex gap-2 rounded-xl">
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
         </div>
-        <hr class=" mt-2 border border-b-accent w-[300px] lg:border-none">
+
+        <hr class="mt-2 border border-b-accent w-[300px] lg:border-none">
       </div>
+
+      <!-- Información del producto -->
       <div class="flex flex-col gap-5 lg:justify-center">
         <div class="flex items-center gap-2 justify-start order-1">
           <h2 class="text-2xl font-bold hidden lg:block">Portatil Lenovo</h2>
           <div class="rating mr-4 lg:flex gap-1 text-sm hidden">
-            <p>4,2/5 </p>
+            <p>4,2/5</p>
             <button class="fa-solid fa-star" style="color: #ffd43b" id="ratingGlobal"></button>
+            <a href="#reviews" class="links underline">Opiniones</a>
           </div>
         </div>
-        <div class=" flex  flex-col text-sm text-center gap-2 lg:order-4">
-          <label class="text-xl">Descripción del producto </label>
-          <p class="mx-2">Equipo versátil y ligero, ideal para tareas diarias, estudio y oficina. Ofrece buen
-            rendimiento, pantalla
-            clara y diseño compacto a un precio accesible.</p>
+
+        <!-- Descripción -->
+        <div class="flex flex-col text-sm text-center gap-2 lg:order-4">
+          <label class="text-xl">Descripción del producto</label>
+          <p class="mx-2">
+            Equipo versátil y ligero, ideal para tareas diarias, estudio y oficina. Buen rendimiento, pantalla clara y diseño compacto a un precio accesible.
+          </p>
         </div>
+
+        <!-- Precio -->
         <div class="flex justify-between lg:justify-start items-center lg:order-2">
-          <div class=" hidden lg:flex precio ml-4 lg:m-0">
+          <div class="hidden lg:flex precio ml-4 lg:m-0">
             <span class="text-callToAction font-bold text-3xl ml-2">100.99€</span>
           </div>
-          <div class="rating mr-4 flex gap-1 text-sm lg:hidden">
-            <p>4,2/5 </p>
-            <button class="fa-solid fa-star" style="color: #ffd43b" id="ratingGlobal"></button>
+        </div>
+
+        <!-- Selección de modelo -->
+        <div class="flex flex-col items-center gap-2 order-3 lg:items-start">
+          <h2>Selección de Modelo</h2>
+          <div class="flex flex-row gap-2 text-sm">
+            <div class="border border-textoSecundario rounded p-2 text-center flex flex-col hover:border-accent cursor-pointer">
+              <h4>Windows 11</h4>
+              <small class="text-callToAction">110€</small>
+            </div>
+            <div class="border border-textoSecundario rounded p-4 text-center flex flex-col hover:border-accent cursor-pointer">
+              <h4>Sin Sistema operativo</h4>
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-row items-center gap-2 order-3 lg:justify-start">
-          <div class="border border-textoSecundario rounded p-2 text-center flex flex-col hover:border-accent gap-1">
-            <h4>Windows 11</h4>
-            <small class="text-callToAction">+110€</small>
-            <input type="radio" name="SO" id="SO" class="cursor-pointer">
-          </div>
-          <div class="border border-textoSecundario rounded px-7 py-2 text-center flex flex-col hover:border-accent gap-1">
-            <h4>Sin SO</h4>
-            <small class="text-callToAction">+0€</small>
-            <input type="radio" name="sinSO" id="noSO" class="cursor-pointer">
-          </div>
-        </div>
-
-        <div
-          class="bg-texto fixed w-full bottom-0 z-50 p-2 rounded-tl-2xl rounded-tr-2xl lg:flex lg:justify-center lg:items-center lg:gap-2 lg:static lg:bg-transparent lg:order-5">
+        <!-- Botón añadir al carrito -->
+        <div class="bg-background fixed w-full bottom-0 z-50 p-2 rounded-tl-2xl rounded-tr-2xl lg:flex lg:justify-center lg:items-center lg:gap-2 lg:static lg:bg-transparent lg:order-5">
           <div class="flex justify-between">
-            <span class="text-callToAction font-bold text-3xl ml-2 lg:hidden">100.99€</span>
-            <button class="buttons w-[220px] md:w-[350px]"> Añadir al carrito</button>
+            <span class="text-accent font-bold text-3xl ml-2 lg:hidden">100.99€</span>
+            <button class="bg-callToAction text-texto hover:bg-accent hover:text-background buttons w-[220px] md:w-[350px] rounded ">Añadir al carrito</button>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="reviews flex flex-col gap-4 p-4">
+    <!-- Reviews -->
+    <section class="reviews flex flex-col gap-4 p-4" id="reviews">
       <label class="font-bold text-xl text-center">Opiniones de Usuarios</label>
-      <!-- Tarjeta de review -->
+
       <div class="review-card bg-[#2a2a2a] p-3 rounded-xl shadow-md flex flex-col gap-2">
-        <!-- Usuario y rating -->
         <div class="flex items-center gap-2">
-          <img src="../assets/images/persona/persona.jpg" alt="Usuario"
-            class="w-10 h-10 rounded-full border-2 border-accent" />
+          <img src="../assets/images/persona/persona.jpg" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-accent" />
           <div class="flex items-center gap-1">
             <button class="fa-solid fa-star text-sm" style="color: #ffd43b"></button>
             <button class="fa-solid fa-star text-sm" style="color: #ffd43b"></button>
@@ -123,23 +144,16 @@
             <button class="fa-regular fa-star text-sm"></button>
           </div>
         </div>
-
-        <!-- Texto de la review ejemplo -->
-        <p class="text-texto text-sm ml-10">
-          Este producto es excelente, muy recomendable.
-        </p>
-
-        <!-- Input de añadir review -->
+        <p class="text-texto text-sm ml-10">Este producto es excelente, muy recomendable.</p>
         <div class="persona-review flex items-center gap-2 mt-1 ml-[42px]">
           <input type="text" placeholder="Escribe tu opinión" class="inputs flex-1 text-sm py-2 px-3 rounded-md" />
           <button class="fa-solid fa-circle-check fa-lg icono"></button>
         </div>
       </div>
+
       <div class="review-card bg-[#2a2a2a] p-3 rounded-xl shadow-md flex flex-col gap-2">
-        <!-- Usuario y rating -->
         <div class="flex items-center gap-2">
-          <img src="../assets/images/persona/persona.jpg" alt="Usuario"
-            class="w-10 h-10 rounded-full border-2 border-accent" />
+          <img src="../assets/images/persona/persona.jpg" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-accent" />
           <div class="flex items-center gap-1">
             <button class="fa-solid fa-star text-sm" style="color: #ffd43b"></button>
             <button class="fa-regular fa-star text-sm"></button>
@@ -148,13 +162,7 @@
             <button class="fa-regular fa-star text-sm"></button>
           </div>
         </div>
-
-        <!-- Texto de la review ejemplo -->
-        <p class="text-texto text-sm ml-10">
-          Este producto es horrible , muy recomendable para no querer más, pero la foto esta guapa.
-        </p>
-
-        <!-- Input de añadir review -->
+        <p class="text-texto text-sm ml-10">Este producto es horrible, muy recomendable para no querer más, pero la foto está guapa.</p>
         <div class="persona-review flex items-center gap-2 mt-1 ml-[42px]">
           <input type="text" placeholder="Escribe tu opinión" class="inputs flex-1 text-sm py-2 px-3 rounded-md" />
           <button class="fa-solid fa-circle-check fa-lg icono"></button>
@@ -163,21 +171,18 @@
     </section>
   </main>
 
-  <!--Footer-->
+  <!-- Footer -->
   <footer class="bg-background text-texto py-7 px-5">
     <div class="flex flex-col items-center text-center gap-2">
       <div class="flex items-center">
         <img src="../assets/images/logo.png" alt="logo" class="mb-2 w-[60px]" />
-        <p class="m-0 opacity-[0.8]">
-          &copy; 2025 Voltify. Todos los derechos reservados
-        </p>
+        <p class="m-0 opacity-[0.8]">&copy; 2025 Voltify. Todos los derechos reservados</p>
       </div>
       <div class="flex gap-2">
-        <a href="#" class="decoration-0 opacity-[0.8] links">Aviso legal</a>
-        <a href="#" class="decoration-0 opacity-[0.8] links">Política de privacidad</a>
-        <a href="#" class="decoration-0 opacity-[0.8] links">Términos y condiciones</a>
+        <a href="#" class="opacity-[0.8] links">Aviso legal</a>
+        <a href="#" class="opacity-[0.8] links">Política de privacidad</a>
+        <a href="#" class="opacity-[0.8] links">Términos y condiciones</a>
       </div>
-
       <div class="flex justify-center gap-3 mt-2">
         <a href="#" class="fa-brands fa-x-twitter icono"></a>
         <a href="#" class="fa-brands fa-instagram icono"></a>

@@ -36,5 +36,14 @@
         Add Address
       </button>
     </div>
+    <hr>
+    <div class="flex flex-col gap-3">
+      <h3 class="text-xl font-bold">Payment Methods</h3>
+      <button class="buttons w-[150px]">
+        <i class="fa-solid fa-plus"></i>
+        Add method
+      </button>
+    </div>
+
   </div>
 </main>

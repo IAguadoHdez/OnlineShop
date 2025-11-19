@@ -36,8 +36,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 <main class="flex justify-center items-center h-screen">
     <!-- No usamos el action para dejar procesar el codigo de php al navegador y hacemos el novalidate para que el HTML no se superponga a los errores que quiero poner yo-->
-    <form method="POST" action="" novalidate class="flex flex-col gap-6 items-center justify-center bg-[#111111] border border-[#FF4D00]/60
-    rounded-2xl p-10 shadow-[0_0_15px_#FF4D00]/30 w-[350px]">
+    <form method="POST" action="" novalidate class="flex flex-col gap-6 items-center justify-center bg-[#111111] border border-accent/60 rounded-2xl p-10 shadow-[0_0_15px_accent]/30 w-[350px]">
         <h2 class="text-3xl font-bold text-call-to-action">LOGIN</h2>
         <p class="text-red-500 text-sm min-h-[1em]"></p>
 
@@ -58,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         </div>
 
         <button type="submit" name="submit" class="buttons w-full">Login</button>
-        <p class="text-sm text-texto/60 mt-2">¿No tienes cuenta? <a href="#" class="text-accent hover:underline">Regístrate</a></p>
+        <p class="text-sm text-texto/60 mt-2">¿No tienes cuenta? <a href="#" class="text-accent hover:text-callToAction hover:underline">Regístrate</a></p>
         <a href="../index.html" class="text-texto/60 block mt-6 text-sm text-texto-secundario hover:text-accent transition">← Volver atras</a>
     </form>
     

@@ -16,7 +16,7 @@ if ($q !== "") {
     // $likeQ significa que cualquier producto que contenga cierta 
     // parte de una palabra, por ejemplo buscamos sobre "camiseta"
     // mientras tuviese puesto "%camisa%" encontraría tanto "Camisas" como "Camisetas"
-    $likeQ = "%$q%";
+    $likeQ = "$q%";
 
     $stmt->bind_param("s", $likeQ);
 } else {
@@ -32,13 +32,12 @@ $productos = $result->fetch_all(MYSQLI_ASSOC);
 // Mostrar resultados
 if (count($productos) > 0) {
     foreach ($productos as $p) {
-        showProducts($p); // Reutiliza tu función para mostrar cada producto
+        showProducts($p);
     }
 } else {
     echo "<p class='text-texto'>No se encontraron productos.</p>";
 }
 
-// Cerramos la consulta y la conexión
 $stmt->close();
 $conn->close();
 ?>

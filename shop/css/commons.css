@@ -21,7 +21,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     color: var(--texto);
 }
 
@@ -38,16 +38,19 @@ header nav {
 header img {
     width: 60px;
 }
+
 img[alt="logo"]:hover {
     cursor: pointer;
 }
+
 .logo {
     width: 60px;
     height: 60px;
-            background-image: url('/student002/shop/assets/images/logo.png');
+    background-image: url('/student002/shop/assets/images/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 /* Iconos */
 i {
     color: var(--call-to-action);
@@ -69,6 +72,7 @@ i {
     justify-content: space-between;
     padding: 20px;
 }
+
 .menu-overlay.activo {
     left: 0;
 }
@@ -84,12 +88,14 @@ i {
 .menu-links {
     flex: 1;
 }
+
 .menu {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .menu li a {
     color: var(--texto);
     text-decoration: none;
@@ -114,7 +120,8 @@ i {
 
 .btn-login:hover {
     background-color: var(--call-to-action);
-    transition: ease-in;
+    transition: all;
+    color:var(--texto)
 }
 
 /* Footer*/
@@ -124,6 +131,7 @@ footer {
     padding: 30px 20px;
     font-size: 0.95rem;
 }
+
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -136,26 +144,29 @@ footer {
     width: 60px;
     margin-bottom: 10px;
 }
-.footer-info p{
+
+.footer-info p {
     margin: 0;
     opacity: 0.8;
 }
-.footer-links{
+
+.footer-links {
     display: flex;
     gap: 10px;
 }
-.footer-links a{
+
+.footer-links a {
     text-decoration: none;
     opacity: 0.8;
     color: var(--texto);
 }
 
-.footer-socials{
+.footer-socials {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 10px;
-    
+
 }
 
 .footer-socials a {
@@ -172,25 +183,27 @@ footer {
     max-width: 500px;
     margin: 0 20px;
     position: relative;
-    }
+}
 
-    .search-bar input {
-        display: flex;
-        color: var(--color-texto);
-        background: transparent;
-        border: 1px solid #333;
-        outline:none;
-        width: 600px;
-        border-radius: 8px;
-        padding: 12px 8px;
-        transition: all;
-        transition-duration: 200ms;
-        font-family: 'Montserrat';
-        font-size: 15px;
-    }
+.search-bar input {
+    display: flex;
+    color: var(--color-texto);
+    background: transparent;
+    border: 1px solid #333;
+    outline: none;
+    width: 600px;
+    border-radius: 8px;
+    padding: 12px 8px;
+    transition: all;
+    transition-duration: 200ms;
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+
 @media (min-width: 1025px) {
-/* NAV DESKTOP */ 
-     nav {
+
+    /* NAV DESKTOP */
+    nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -202,14 +215,14 @@ footer {
     .nav-desplegable {
         display: none;
     }
-    
+
     .logo {
         width: 280px;
         height: 80px;
         background-image: url('/student002/shop/assets/images/logoDesk.png');
     }
 
-    .menu-overlay{
+    .menu-overlay {
         position: static;
         width: auto;
         height: auto;
@@ -222,11 +235,12 @@ footer {
         left: auto;
         transition: none;
     }
+
     .menu-close {
         display: none;
     }
 
-    .menu-links{
+    .menu-links {
         flex: 1;
         display: flex;
         justify-content: center;
@@ -239,7 +253,7 @@ footer {
         gap: 40px;
     }
 
-    .menu li a{
+    .menu li a {
         font-size: 1rem;
         padding: 0;
         color: var(--texto);
@@ -251,11 +265,11 @@ footer {
         color: var(--accent);
     }
 
-    .menu-buttons{
+    .menu-buttons {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap:15px;
+        gap: 15px;
     }
 
     .menu-buttons a {
@@ -263,23 +277,28 @@ footer {
         font-size: 0.95rem;
         border-radius: 6px;
     }
+
     .shop_cart {
         order: 3;
+        margin-right: 16px;
     }
+
     .menu-toogle {
         display: none;
     }
-    .btn-login:hover, .btn-signup:hover{
+
+    .btn-login:hover,
+    .btn-signup:hover {
         cursor: pointer;
-       transform: scale(1.05);
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: scale(1.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     i:hover {
-    cursor: pointer;
-    color: var(--accent);
-    transform: scale(1.05);
-    transition: all 0.2s ease;
+        cursor: pointer;
+        color: var(--accent);
+        transform: scale(1.05);
+        transition: all 0.2s ease;
     }
 
     .search-bar {
@@ -290,27 +309,28 @@ footer {
         border: 1px solid var(--accent);
     }
 
-    /* FOOTER DESKTOP */ 
+    /* FOOTER DESKTOP */
     .footer-logo {
         width: 70px;
     }
 
-    .footer-links{
+    .footer-links {
         font-size: 1rem;
     }
 
     .footer-links a:hover {
-    color: var(--accent);
-    
+        color: var(--accent);
+
 
     }
 
     .footer-socials a:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease;
-    color: var(--accent);
-    
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+        color: var(--accent);
+
     }
+
     .footer-info {
         display: flex;
         align-items: center;

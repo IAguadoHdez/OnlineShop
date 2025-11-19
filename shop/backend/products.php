@@ -8,8 +8,8 @@
     <div class='flex my-5 mx-10 w-full justify-between'>
         <div>
             <form action="" class="flex gap-2">
-                <input id="searchProduct" type="text" name="product_name" class="inputs" placeholder="Buscar producto"/>
                 <button id="btn-buscar" class="icono fa-solid fa-magnifying-glass"></button>
+                <input id="searchProduct" type="text" name="product_name" class="inputs" placeholder="Buscar producto"/>
             </form>
         </div>
         <div>

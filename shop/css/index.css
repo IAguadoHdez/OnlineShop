@@ -14,47 +14,51 @@
 
   /* COMPONENTES PARA PODER USAR EL NAV DESPLEGABLE CON TAILWIND */
   .menu-overlay {
-    @apply fixed top-0 left-[-250px] w-[250px] h-full bg-background transition-all duration-300 z-999 flex flex-col justify-between p-5;
+    @apply fixed top-0 -left-[250px] w-[250px] h-full bg-background transition-all duration-300 z-999 flex flex-col justify-between p-5 lg:static lg:left-0 lg:w-auto lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:gap-4;
   }
 
   .menu-overlay.activo {
     @apply left-0;
   }
+
   .menu-close {
-    @apply flex justify-end mb-5 cursor-pointer;
+    @apply flex justify-end mb-5 cursor-pointer lg:hidden;
   }
 
   .menu-links {
-    @apply flex-1;
+    @apply flex-1 lg:flex lg:flex-row;
   }
 
   .menu {
-    @apply list-none flex flex-col gap-3;
+    @apply list-none flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-6;
   }
 
   .nav-desplegable {
-       @apply  lg:hidden;
-    }
-    
+    @apply lg:hidden;
+  }
+
   /* Componente para los iconos  */
   .icono {
-    @apply text-callToAction cursor-pointer hover:text-accent  transition ease-in;
+    @apply text-callToAction cursor-pointer hover:text-accent transition ease-in;
   }
+
   /* Componente para reutilizacion de los links de la pagina */
   .links {
     @apply hover:text-accent;
   }
+
   /* Componente para reutilizacion de los botones de la pagina */
   .buttons {
     @apply bg-accent text-background py-2 rounded-md font-semibold hover:bg-callToAction hover:text-texto transition ease-in cursor-pointer;
   }
+
   /* Componente para reutilizacion de los inputs de texto de la pagina */
   .inputs {
-    @apply text-texto placeholder-textoSecundario bg-transparent border border-[#333] focus:border-accent outline-none rounded-md w-full py-2 px-3 transition-all duration-200;
+    @apply text-texto placeholder-texto/60 bg-transparent border border-[#333] focus:border-accent outline-none rounded-md w-full py-2 px-3 transition-all duration-200;
   }
 
   /* Componentes de tarjetas de producto (NO IMPLEMENTADO) */
   .images-products-select {
-    @apply w-12 h-12 border border-texto rounded-xl hover:border-accent;
+    @apply w-12 h-12 border border-texto rounded-xl hover:border-accent cursor-pointer;
   }
 }
