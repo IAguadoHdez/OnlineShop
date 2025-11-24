@@ -9,13 +9,14 @@ $productoEliminado = ($id && $confirmado) ? eliminarProducto($id) : null;
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Eliminar Producto</title>
 </head>
 
-<body class="bg-background flex items-center justify-center min-h-screen font-sans">
-    <div class="bg-[#1A1A1A] p-10 rounded-2xl shadow-2xl text-center max-w-md w-full mx-auto border border-textoSecundario/30">
+<main class="flex h-[calc(100vh-84px)] justify-center items-center">
+    <div class="bg-[#1A1A1A] rounded-2xl p-10 h- shadow-2xl  text-center border border-textoSecundario/30">
 
         <h1 class="text-2xl font-bold mb-6 text-texto">
             <?= ($productoEliminado === true) ? "Producto eliminado" : (($id && !$confirmado) ? "Confirmar eliminación" : "No se pudo eliminar") ?>
@@ -29,15 +30,17 @@ $productoEliminado = ($id && $confirmado) ? eliminarProducto($id) : null;
                     : "El producto con ID <span class='text-accent font-semibold'>" . ($id) . "</span> no existe o no se seleccionó correctamente.") ?>
         </p>
         <?= ($id && !$confirmado) ? '
-        <form method="POST" class="flex justify-center gap-4">
-            <input type="hidden" name="product_id" value="' . ($id) . '">
-            <input type="hidden" name="confirmar" value="1">
-            <input type="submit" value="Aceptar" class="buttons w-[100px]">
-            <a href="../../index.php" class="buttons w-[100px] bg-accent text-background hover:bg-callToAction hover:text-texto">Cancelar</a>
-        </form>' : ''
-        ?>
-        <a href="../../products.php" class="block mt-6 text-sm text-textoSecundario hover:text-accent transition">← Volver atras</a>
+            <form method="POST" class="flex justify-center gap-4">
+                <input type="hidden" name="product_id" value="' . ($id) . '">
+                <input type="hidden" name="confirmar" value="1">
+                <input type="submit" value="Aceptar" class="buttons w-[100px]">
+                <a href="../../index.php" class="buttons w-[100px] bg-accent text-background hover:bg-callToAction hover:text-texto">Cancelar</a>
+            </form>' : ''
+            ?>
+        <a href="../../products.php" class="block mt-6 text-sm text-textoSecundario hover:text-accent transition">←
+            Volver atras</a>
     </div>
-</body>
+
+</main>
 
 </html>

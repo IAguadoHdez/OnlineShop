@@ -1,6 +1,7 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php'; 
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php';
 
-function agregarOActualizarProducto($idProducto) {
+function agregarOActualizarProducto($idProducto)
+{
     global $conn;
 
     // Verificar si el producto ya está en el carrito
@@ -26,12 +27,32 @@ function agregarOActualizarProducto($idProducto) {
 
     $consulta->close();
 }
-function eliminarProducto($idCarrito) {
+function eliminarProducto($idCarrito)
+{
     global $conn;
 
     $borrar = $conn->prepare("DELETE FROM 002shopping_cart WHERE cart_id = ?");
     $borrar->bind_param("i", $idCarrito);
     $borrar->execute();
     $borrar->close();
+}
+
+function restarProducto($idProducto)
+{
+    global $conn;
+    // Verificar que el producto este en el carrito
+    $consulta = $conn->prepare("SELECT cart_id, stock FROM 002shopping_cart WHERE product_id = ?");
+    $consulta->bind_param("i", $idProducto);
+    $consulta->execute();
+    $resultado = $consulta->get_result();
+
+    if ($fila = $resultado->fetch_assoc()) {
+
+        $nuevaCantidad = $fila['stock'] - 1;
+        $actualizar = $conn->prepare("UPDATE 002shopping_cart SET stock = ? WHERE cart_id = ?");
+        $actualizar->bind_param("ii", $nuevaCantidad, $fila['cart_id']);
+        $actualizar->execute();
+        $actualizar->close();
+    }
 }
 ?>

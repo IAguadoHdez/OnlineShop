@@ -16,7 +16,7 @@ $campos = [
 
 // Actualizar producto si el producto existe
 if (!empty($_POST['update']) && $producto) {
-    foreach ($campos as $key => &$valor) {
+    foreach ($campos as $key => $valor) {
         $valor = $_POST[$key] ?? $valor;
     }
     unset($valor);
