@@ -2,14 +2,14 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/functions/product_functions.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/db_getproducts.php'; ?>
 
-<main class="px-4 md:px-8 lg:px-16 py-8 bg-[#1A1A1A]">
-    <h1 class="text-3xl font-semibold text-center text-texto mb-8">Productos</h1>
+<main class="px-4 md:px-8 lg:px-16 py-8 bg-background">
+    <h1 class="text-3xl font-semibold text-center text-texto mb-8">Products</h1>
     
     <div class='flex my-5 mx-10 w-full justify-between'>
         <div>
             <form action="" class="flex gap-2">
                 <button id="btn-buscar" class="icono fa-solid fa-magnifying-glass"></button>
-                <input id="searchProduct" type="text" name="product_name" class="inputs" placeholder="Buscar producto"/>
+                <input id="searchProduct" type="text" name="product_name" class="inputs border-2" placeholder="Buscar producto"/>
             </form>
         </div>
         <div>

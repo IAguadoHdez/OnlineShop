@@ -35,11 +35,11 @@ foreach ($productos as $p) {
 }
 ?>
 
-<main class="min-h-screen bg-[#1A1A1A] text-texto py-12 flex justify-center">
+<main class="min-h-screen bg-background text-background py-12 flex justify-center">
 
-  <div class="w-full max-w-6xl flex flex-col lg:flex-row gap-8 px-4">
+  <div class="w-full max-w-6xl flex flex-col lg:flex-row gap-8 px-4 ">
     <!-- Lista de Productos -->
-    <div class="flex-1 bg-background p-6 rounded-xl shadow-lg">
+    <div class="flex-1 bg-texto p-6 rounded-xl shadow-xl">
       <h2 class="text-2xl font-bold text-call-to-action mb-6">Your cart</h2>
 
       <?php if ($productos): ?>
@@ -48,10 +48,10 @@ foreach ($productos as $p) {
             <li class="flex items-center justify-between py-4">
               <div class="flex items-center gap-4">
                 <img src="<?= ($p['product_image']) ?>" alt="<?= ($p['product_name']) ?>"
-                  class="w-20 h-20 object-cover rounded-lg border border-callToAction">
+                  class="w-20 h-20 object-cover rounded-lg border border-accent">
                 <div>
                   <p class="font-semibold"><?= ($p['product_name']) ?></p>
-                  <p class="text-texto/60 text-sm"><?= number_format($p['product_price'], 2) ?> € x <?= $p['stock'] ?></p>
+                  <p class="text-background/60 text-sm"><?= number_format($p['product_price'], 2) ?> € x <?= $p['stock'] ?></p>
                 </div>
               </div>
 
@@ -73,12 +73,12 @@ foreach ($productos as $p) {
           <?php endforeach; ?>
         </ul>
       <?php else: ?>
-        <p class="text-texto/60 text-center">Your cart is empty</p>
+        <p class="text-background/60 text-center">Your cart is empty</p>
       <?php endif; ?>
     </div>
 
     <!-- Total -->
-    <div class="w-full lg:w-80 bg-background p-6 rounded-xl shadow-lg h-fit">
+    <div class="w-full lg:w-80 bg-texto p-6 rounded-xl shadow-lg h-fit">
       <h2 class="text-2xl font-bold text-call-to-action mb-4 text-left">Summary</h2>
       <?php foreach ($productos as $p): ?>
         <li class="flex items-center justify-between py-4">
@@ -90,11 +90,11 @@ foreach ($productos as $p) {
       <p class="text-lg mb-6">Total: <span class="font-semibold text-call-to-action"><?= number_format($total, 2) ?>
           €</span></p>
       <button
-        class="bg-callToAction text-texto py-2 px-4 rounded-xl font-semibold hover:bg-accent hover:text-background transition-all duration-200 w-full cursor-pointer">
+        class="buttons w-full">
         Complete order
       </button>
       <a href="products.php"
-        class="text-texto/60 block mt-6 text-sm text-texto-secundario hover:text-accent transition text-center">← Volver
+        class="links block mt-6 text-sm text-texto-secundario  transition text-center">← Volver
         atras</a>
     </div>
 

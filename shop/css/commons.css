@@ -1,9 +1,10 @@
 :root {
-    --background: #0d0d0d;
-    --texto: #f5f5f5;
+    --texto: #0d0d0d;
+    --background: #f5f5f5;
     --texto_secundario: #737373;
-    --accent: #00c4cc;
-    --call-to-action: #ff4d00;
+    --call-to-action: #00c4cc;
+    --accent: #ff4d00;
+    --accent-alpha: #ff4d0099;
 }
 
 @font-face {
@@ -17,11 +18,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--background);
     color: var(--texto);
 }
 
@@ -32,6 +34,8 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: var(--texto);
+    color: var(--background);
 }
 
 /* Tamaño logo y hover */
@@ -53,7 +57,7 @@ img[alt="logo"]:hover {
 
 /* Iconos */
 i {
-    color: var(--call-to-action);
+    color: var(--accent);
 }
 
 
@@ -64,7 +68,7 @@ i {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: var(--background);
+    background-color: var(--texto);
     transition: left 0.3s;
     z-index: 999;
     display: flex;
@@ -87,6 +91,7 @@ i {
 /* Enlaces del menú */
 .menu-links {
     flex: 1;
+    
 }
 
 .menu {
@@ -97,7 +102,7 @@ i {
 }
 
 .menu li a {
-    color: var(--texto);
+    color: var(--background);
     text-decoration: none;
     font-size: 1rem;
     padding: 10px 0;
@@ -105,12 +110,7 @@ i {
 
 /* Botones de login y signup */
 .menu-buttons a {
-    text-align: center;
-    padding: 8px 24px;
-    border-radius: 1rem;
     text-decoration: none;
-    display: block;
-    font-weight: bold;
 }
 
 .btn-login {
@@ -119,15 +119,13 @@ i {
 }
 
 .btn-login:hover {
-    background-color: var(--call-to-action);
-    transition: all;
-    color:var(--texto)
+    filter: brightness(70%);
 }
 
 /* Footer*/
 footer {
-    background-color: var(--background);
-    color: var(--texto);
+    background-color: var(--texto);
+    color: var(--background);
     padding: 30px 20px;
     font-size: 0.95rem;
 }
@@ -158,7 +156,7 @@ footer {
 .footer-links a {
     text-decoration: none;
     opacity: 0.8;
-    color: var(--texto);
+    color: var(--background);
 }
 
 .footer-socials {
@@ -192,12 +190,24 @@ footer {
     border: 1px solid #333;
     outline: none;
     width: 600px;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 12px 8px;
     transition: all;
-    transition-duration: 200ms;
+    transition-duration: 0.2s;
     font-family: 'Montserrat';
     font-size: 15px;
+}
+
+.icon-container {
+    border: 1px solid #333;
+    border-right: none;
+    padding: 12px 8px;
+    border-radius: 4px;
+}
+
+.search-bar i:hover {
+    color: var(--call-to-action);
+    filter: none;
 }
 
 @media (min-width: 1025px) {
@@ -256,13 +266,14 @@ footer {
     .menu li a {
         font-size: 1rem;
         padding: 0;
-        color: var(--texto);
+        color: var(--background);
         text-decoration: none;
         transition: color 0.2 ease;
     }
 
     .menu li a:hover {
         color: var(--accent);
+        text-decoration: underline;
     }
 
     .menu-buttons {
@@ -290,14 +301,13 @@ footer {
     .btn-login:hover,
     .btn-signup:hover {
         cursor: pointer;
-        transform: scale(1.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: all;
+        transition-duration: 0.5s;
     }
 
     i:hover {
         cursor: pointer;
-        color: var(--accent);
-        transform: scale(1.05);
+        filter: brightness(60%);
         transition: all 0.2s ease;
     }
 

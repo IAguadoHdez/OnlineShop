@@ -2,11 +2,11 @@
 
 function showProducts($p)
 {
-    echo "<li class='bg-background border border-callToAction shadow-md rounded-xl p-4 w-56 flex flex-col items-center text-center transition-transform hover:border-accent'>";
+    echo "<li class='bg-texto border-2 shadow-2xl hover:scale-101 rounded-xl p-4 w-56 flex flex-col items-center text-center transition-transform '>";
 
     echo "<img src='{$p['product_image']}' class='w-44 h-44 object-cover mb-3 rounded-lg'>";
-    echo "<strong class='text-lg font-medium mb-1 text-texto'>{$p['product_name']}</strong>";
-    echo "<p class='text-texto mb-3'>Precio: <span class='font-semibold'>{$p['product_price']} €</span></p>";
+    echo "<strong class='text-lg font-medium mb-1 text-background'>{$p['product_name']}</strong>";
+    echo "<p class='text-background mb-3'>Precio: <span class='font-semibold'>{$p['product_price']} €</span></p>";
 
     echo "<div class='flex gap-2 flex-wrap justify-center'>";
 

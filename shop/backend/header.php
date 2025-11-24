@@ -28,7 +28,7 @@
           echo "<a href='/student002/shop/backend/login.php'> <button class='fa-solid fa-arrow-right-to-bracket cursor-pointer icono'></button></a>";
         } else if ($_SESSION) {
           echo "<a href='/student002/shop/backend/myprofile.php'>
-            <button class='fa-regular fa-user text-callToAction cursor-pointer'></button>
+            <button class='fa-regular fa-user icono'></button>
           </a>";
 
           include("logout.php");

@@ -30,33 +30,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<main class="flex justify-center items-center h-screen bg-[#1a1a1a]">
-    <!-- No usamos el action para dejar procesar el codigo de php al navegador y hacemos el novalidate para que el HTML no se superponga a los errores que quiero poner yo-->
-    <form method="POST" action="" novalidate class="flex flex-col gap-6 items-center justify-center bg-[#111111] border border-accent/60 rounded-2xl p-10 shadow-[0_0_15px_accent]/30 w-[350px]">
-        <h2 class="text-3xl font-bold text-call-to-action">LOGIN</h2>
-        <p class="text-red-500 text-sm min-h-[1em]"></p>
 
+<main class="flex justify-center items-center min-h-screen bg-background">
+    <form method="POST" action="" novalidate class="flex flex-col gap-6 items-center justify-center bg-texto shadow-2xl rounded-2xl p-10 w-full max-w-md text-background">
+        <h2 class="text-3xl font-bold">LOGIN</h2>
+
+        <!-- Email -->
         <div class="flex flex-col w-full">
-            <label class="text-texto text-sm mb-1" for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Enter Email" required class="inputs">
-            <p class="text-red-500 text-sm min-h-[1em]">
-                <?php echo $emailError ?>
-            </p>
+            <label for="email" class="mb-1 text-sm font-medium">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email"
+                value="<?= htmlspecialchars($email) ?>" class="inputs text-background placeholder:background">
+            <p class="text-red-500 text-sm mt-1 min-h-[1em]"><?= $emailError ?></p>
         </div>
 
+        <!-- Password -->
         <div class="flex flex-col w-full">
-            <label class="text-texto text-sm mb-1" for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Enter Password" required class="inputs">
-            <p class="text-red-500 text-sm min-h-[1em]">
-                <?php echo $passwordError ?>
-            </p>
+            <label for="password" class="mb-1 text-sm font-medium">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password"
+                class="inputs text-background placeholder:background">
+            <p class="text-red-500 text-sm mt-1 min-h-[1em]"><?= $passwordError ?></p>
         </div>
 
         <button type="submit" name="submit" class="buttons w-full">Login</button>
-        <p class="text-sm text-texto/60 mt-2">¿No tienes cuenta? <a href="#" class="text-accent hover:text-callToAction hover:underline">Regístrate</a></p>
-        <a href="../index.html" class="text-texto/60 block mt-6 text-sm text-texto-secundario hover:text-accent transition">← Volver atras</a>
-    </form>
 
+        <p class="text-sm text-textoSecundario">¿You don't have account? <a href="#"
+                class="links text-callToAction">Regístrate</a></p>
+
+        <a href="../index.html" class=" text-textoSecundario hover:text-callToAction hover:underline text-sm">← Go back</a>
+    </form>
 </main>
+
 
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/footer.php'; ?>

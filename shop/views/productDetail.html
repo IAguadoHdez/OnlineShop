@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
 <body class="bg-background text-texto font-montserrat">
 
   <!--Navegación -->
-  <header>
+  <header class="bg-texto text-background">
     <nav class="flex justify-between items-center p-2">
       <div class="nav-desplegable">
         <i class="icono fa-solid fa-bars fa-xl"></i>
@@ -26,9 +26,9 @@
 
       <div class="hidden md:flex items-center justify-center flex-1 max-w-[500px]">
         <div class="border border-[#333] rounded py-2 px-2 border-r-0">
-          <i class="icono fa-solid fa-magnifying-glass"></i>
+          <i class="icono fa-solid fa-magnifying-glass hover:text-callToAction hover:brightness-100"></i>
         </div>
-        <input type="text" placeholder="Search" class="inputs" />
+        <input type="text" placeholder="Search" class="inputs placeholder:text-textoSecundario text-background/80 " />
       </div>
 
       <div class="order-3 mr-4">
@@ -54,8 +54,8 @@
   </header>
 
   <!-- Producto -->
-  <main class="bg-[#1a1a1a]">
-    <div class="contenedor-producto flex flex-col lg:flex-row lg:border-b lg:border-textoSecundario">
+  <main class="bg-background">
+    <div class="contenedor-producto flex flex-col lg:flex-row lg:border-b lg:border-textoSecundario lg:justify-center lg:items-center">
 
       <!-- Imagen del producto -->
       <div class="flex flex-col items-center mb-5 gap-2">
@@ -77,12 +77,10 @@
           <img src="../assets/images/products/product1.png" class="images-products-select" />
           <img src="../assets/images/products/product1.png" class="images-products-select" />
         </div>
-
-        <hr class="mt-2 border border-b-accent w-[300px] lg:border-none">
       </div>
 
       <!-- Información del producto -->
-      <div class="flex flex-col gap-5 lg:justify-center">
+      <div class=" bg-[#eeeeee] flex flex-col gap-5 lg:justify-center lg:shadow-xl lg:rounded-2xl lg:h-140 lg:p-4">
         <div class="flex items-center gap-2 justify-start lg:order-1">
           <h2 class="text-2xl font-bold hidden lg:block">Portatil Lenovo</h2>
           <div class="rating mr-4 lg:flex gap-1 text-sm hidden">
@@ -97,12 +95,12 @@
           <h2>Selección de Modelo</h2>
           <div class="flex flex-row gap-2 text-sm">
 
-            <div class="border border-textoSecundario rounded p-2 text-center flex flex-col hover:border-accent cursor-pointer">
+            <div class="border-2 border-textoSecundario rounded p-2 text-center flex flex-col hover:border-accent cursor-pointer">
               <h4>Windows 11</h4>
-              <small class="text-callToAction">110€</small>
+              <small class="text-accent">110€</small>
             </div>
 
-            <div class="border border-textoSecundario rounded p-4 text-center flex flex-col hover:border-accent cursor-pointer">
+            <div class="border-2 border-textoSecundario rounded p-4 text-center flex flex-col hover:border-accent cursor-pointer">
               <h4>Sin Sistema operativo</h4>
             </div>
           </div>
@@ -120,18 +118,17 @@
         <!-- Precio -->
         <div class="flex justify-between lg:justify-start items-center lg:order-2">
           <div class="hidden lg:flex precio ml-4 lg:m-0">
-            <span class="text-callToAction font-bold text-3xl ml-2">100.99€</span>
+            <span class="text-accent font-bold text-3xl ml-2">100.99€</span>
           </div>
         </div>
 
 
         <!-- Botón añadir al carrito -->
         <div
-          class="bg-background fixed w-full bottom-0 z-50 p-2 rounded-tl-2xl rounded-tr-2xl  lg:flex lg:justify-center lg:items-center lg:gap-2 lg:static lg:bg-transparent lg:order-5">
+          class="bg-[#eeeeee] fixed w-full bottom-0 z-50 p-2 rounded-tl-2xl rounded-tr-2xl drop-shadow-[0_-4px_6px_rgba(0,0,0,0.25)] lg:drop-shadow-none lg:flex lg:justify-center lg:items-center lg:gap-2 lg:static lg:bg-transparent lg:order-5">
           <div class="flex justify-between">
             <span class="text-accent font-bold text-3xl ml-2 lg:hidden">100.99€</span>
-            <button
-              class="bg-callToAction text-texto hover:bg-accent hover:text-background buttons w-[220px] md:w-[350px] rounded">Añadir
+            <button class="buttons w-[220px] md:w-[350px] rounded">Añadir
               al carrito</button>
           </div>
         </div>
@@ -143,7 +140,7 @@
     <section class="reviews flex flex-col gap-4 p-4" id="reviews">
       <label class="font-bold text-xl text-center">Opiniones de Usuarios</label>
 
-      <div class="review-card bg-[#2a2a2a] p-3 rounded-xl shadow-md flex flex-col gap-2">
+      <div class="review-card">
         <div class="flex items-center gap-2">
           <img src="../assets/images/persona/persona.jpg" alt="Usuario"
             class="w-10 h-10 rounded-full border-2 border-accent" />
@@ -156,13 +153,13 @@
           </div>
         </div>
         <p class="text-texto text-sm ml-10">Este producto es excelente, muy recomendable.</p>
-        <div class="persona-review flex items-center gap-2 mt-1 ml-[42px]">
-          <input type="text" placeholder="Escribe tu opinión" class="inputs flex-1 text-sm py-2 px-3 rounded-md" />
+        <div class="pers  ona-review flex items-center gap-2 mt-1 ml-[42px]">
+          <input type="text" placeholder="Escribe tu opinión" class="inputs" />
           <button class="fa-solid fa-circle-check fa-lg icono"></button>
         </div>
       </div>
 
-      <div class="review-card bg-[#2a2a2a] p-3 rounded-xl shadow-md flex flex-col gap-2">
+      <div class="review-card ">
         <div class="flex items-center gap-2">
           <img src="../assets/images/persona/persona.jpg" alt="Usuario"
             class="w-10 h-10 rounded-full border-2 border-accent" />
@@ -177,7 +174,7 @@
         <p class="text-texto text-sm ml-10">Este producto es horrible, muy recomendable para no querer más, pero la foto
           está guapa.</p>
         <div class="persona-review flex items-center gap-2 mt-1 ml-[42px]">
-          <input type="text" placeholder="Escribe tu opinión" class="inputs flex-1 text-sm py-2 px-3 rounded-md" />
+          <input type="text" placeholder="Escribe tu opinión" class="inputs" />
           <button class="fa-solid fa-circle-check fa-lg icono"></button>
         </div>
       </div>
@@ -185,7 +182,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-background text-texto py-7 px-5">
+  <footer class="bg-texto text-background py-7 px-5">
     <div class="flex flex-col items-center text-center gap-2">
       <div class="flex items-center">
         <img src="../assets/images/logo.png" alt="logo" class="mb-2 w-[60px]" />
