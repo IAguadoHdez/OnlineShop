@@ -1,201 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos Destacados</title>
-    <link rel="stylesheet" href="./css/commons.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.png"
-      type="image/x-icon"
-    />
-    <script
-      src="https://kit.fontawesome.com/46652c82d3.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header>
-      <!--Navegador -->
-      <nav>
-        <div class="nav-desplegable">
-          <i class="fa-solid fa-bars fa-xl"></i>
-        </div>
-        <div class="logo"></div>
-        <div class="search-bar">
-          <div class="icon-container">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <input type="text" placeholder="Search..." />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos Destacados</title>
+  <link rel="stylesheet" href="./css/commons.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/46652c82d3.js" crossorigin="anonymous"></script>
+</head>
 
-        <div class="shop_cart">
-          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+<body>
+  <header>
+    <!--Navegador -->
+    <nav>
+      <div class="nav-desplegable">
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </div>
+      <div class="logo"></div>
+      <div class="search-bar">
+        <div class="icon-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <div class="menu-overlay">
-          <div class="menu-close">
-            <i class="fa-solid fa-xmark fa-xl"></i>
-          </div>
-          <div class="menu-links">
-            <ul class="menu">
-              <li><a href="#">Inicio</a></li>
-              <li><a href="./views/products">Productos</a></li>
-              <li><a href="./views/contact">Contacto</a></li>
-            </ul>
-          </div>
-          <div class="menu-buttons">
-            <a href="./backend/login.php" class="btn-login">Login</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <h3 class="hero-title">Descubre lo <span class="">mejor</span> de Voltify</h3>
-        <p class="hero-subtitle">Los productos más innovadores y de calidad a un solo clic</p>
-       <a href="#productosDestacados">
-           <button class="btn-hero">Ver destacados</button>
-       </a>
-      </section>
-
-      <!--Productos destacados y carrusel de productos -->
-      <div class="productosDestacadosCarrusel" id="productosDestacados">
-        <h3 class="section-title">Productos Destacados</h3>
-        <div class="productosDestacados">
-          <div class="product-card">
-            <div class="product-image">
-              <a href="./views/productDetail.html"
-                ><img
-                  src="./assets/images/products/product1.png"
-                  alt="Producto 1"
-              /></a>
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Producto 1</h3>
-              <div class="product-footer">
-                <span class="product-price">$49.99</span>
-                <i class="fa-solid fa-cart-plus fa-xl"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="./assets/images/products/product2.png"
-                alt="Producto 2"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Producto 2</h3>
-              <div class="product-footer">
-                <span class="product-price">$59.99</span>
-                <i class="fa-solid fa-cart-plus fa-xl"></i>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="./assets/images/products/product3.png"
-                alt="Producto 3"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Producto 2</h3>
-              <div class="product-footer">
-                <span class="product-price">$59.99</span>
-                <i class="fa-solid fa-cart-plus fa-xl"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+        <input type="text" placeholder="Search..." />
       </div>
 
-      <!--Productos normales  y boton de filtros-->
-      <section class="productos-selector">
-        <div class="productos-header">
-          <h2 class="section-title">Más productos</h2>
-          <button class="fa-solid fa-filter fa-xl filter-btn"></button>
+      <div class="shop_cart">
+        <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+      </div>
+      <div class="menu-overlay">
+        <div class="menu-close">
+          <i class="fa-solid fa-xmark fa-xl"></i>
         </div>
-
-        <div class="productosNormales">
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="./assets/images/products/product4.png"
-                alt="Producto 4"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Producto 1</h3>
-              <div class="product-footer">
-                <span class="product-price">$49.99</span>
-                <i class="fa-solid fa-cart-plus fa-xl"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="./assets/images/products/product5.png"
-                alt="Producto 5"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Producto 2</h3>
-              <div class="product-footer">
-                <span class="product-price">$59.99</span>
-                <i class="fa-solid fa-cart-plus fa-xl"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="./assets/images/products/product6.png"
-                alt="Producto 6"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Producto 3</h3>
-              <div class="product-footer">
-                <span class="product-price">$39.99</span>
-                <i class="fa-solid fa-cart-plus fa-xl"></i>
-              </div>
-            </div>
-          </div>
+        <div class="menu-links">
+          <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="./views/products">Productos</a></li>
+            <li><a href="./views/contact">Contacto</a></li>
+          </ul>
         </div>
-      </section>
-    </main>
-
-    <!--Footer -->
-    <footer>
-      <div class="footer-container">
-        <div class="footer-info">
-          <img src="./assets/images/logo.png" alt="logo" class="footer-logo" />
-          <p>&copy; 2025 Voltify. Todos los derechos reservados</p>
-        </div>
-        <div class="footer-links">
-          <a href="#">Aviso legal</a>
-          <a href="#">Política de privacidad</a>
-          <a href="#">Términos y condiciones</a>
-        </div>
-
-        <div class="footer-socials">
-          <a href="#" class="fa-brands fa-x-twitter"></a>
-          <a href="#" class="fa-brands fa-instagram"></a>
-          <a href="#" class="fa-brands fa-facebook-f"></a>
+        <div class="menu-buttons">
+          <a href="./backend/login.php" class="btn-login">Login</a>
         </div>
       </div>
-    </footer>
+    </nav>
+  </header>
 
-    <script src="./js/commons.js"></script>
-  </body>
+  <main>
+    <section class="hero">
+      <h3 class="hero-title">Descubre lo <span class="">mejor</span> de Voltify</h3>
+      <p class="hero-subtitle">Los productos más innovadores y de calidad a un solo clic</p>
+      <a href="#productosDestacados">
+        <button class="btn-hero">Ver destacados</button>
+      </a>
+    </section>
+
+    <!-- Productos Destacados -->
+    <div class="productosDestacadosCarrusel" id="productosDestacados">
+      <h3 class="section-title">Productos Destacados</h3>
+      <div class="productosDestacados" id="productosDestacadosContainer">
+        <!-- Productos Destacados se inyectarán aquí -->
+      </div>
+    </div>
+
+    <!-- Más Productos -->
+    <section class="productos-selector">
+      <div class="productos-header">
+        <h2 class="section-title">Más productos</h2>
+        <button class="fa-solid fa-filter fa-xl filter-btn"></button>
+      </div>
+      <div class="productosNormales" id="productosNormalesContainer">
+        <!-- Más productos se inyectarán aquí -->
+      </div>
+    </section>
+
+  </main>
+
+  <!--Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <img src="./assets/images/logo.png" alt="logo" class="footer-logo" />
+        <p>&copy; 2025 Voltify. Todos los derechos reservados</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos y condiciones</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#" class="fa-brands fa-x-twitter"></a>
+        <a href="#" class="fa-brands fa-instagram"></a>
+        <a href="#" class="fa-brands fa-facebook-f"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/commons.js"></script>
+  <script src="./js/frontend_products.js"></script>
+</body>
+
 </html>

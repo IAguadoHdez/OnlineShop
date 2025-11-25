@@ -50,7 +50,7 @@ img[alt="logo"]:hover {
 .logo {
     width: 60px;
     height: 60px;
-    background-image: url('./assets/images/logo.png');
+    background-image: url('../assets/images/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -116,6 +116,7 @@ i {
 .btn-login {
     background-color: var(--accent);
     color: var(--background);
+    font-weight: bold;
 }
 
 .btn-login:hover {
@@ -229,7 +230,7 @@ footer {
     .logo {
         width: 280px;
         height: 80px;
-        background-image: url('/student002/shop/assets/images/logoDesk.png');
+        background-image: url('../assets/images/logoDesk.png');
     }
 
     .menu-overlay {
