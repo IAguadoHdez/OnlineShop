@@ -15,9 +15,6 @@ body {
   color: #0d0d0d;
 }
 
-header {
-  /* Barra de busqueda */
-}
 header nav {
   display: flex;
   flex-direction: row;
