@@ -1,7 +1,9 @@
 <?php
 session_start();
-include  __DIR__ . '/../../db/db_customer_insert.php';
-include  __DIR__ . '/../../header.php';
+
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/customers/db_customer_insert.php';
+
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/header.php';
 
 $customerInsertado = null;
 

@@ -1,0 +1,343 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $background;
+  color: $texto;
+}
+
+// MOBILE SASS
+// HEADER 
+header {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: $texto;
+    color: $background;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  img[alt="logo"]:hover {
+    cursor: pointer;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+    background-image: url("../../assets/images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  i {
+    color: $accent;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: $texto;
+    transition: left 0.3s;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .menu-overlay.activo {
+    left: 0;
+  }
+  
+  .menu-close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .menu-links {
+    flex: 1;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+    li a {
+      color: $background;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px 0;
+    }
+  }
+  
+  // BOTON DE LOGIN
+  .menu-buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  
+    a{
+      text-decoration: none;
+    }
+  
+  }
+  
+  .btn-login {
+    background-color: $accent;
+    color: $background;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .btn-login:hover {
+    filter: brightness(70%);
+  }
+  
+  /* Barra de busqueda */
+  .search-bar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
+  
+    input {
+      display: flex;
+      color: $texto;
+      background: transparent;
+      border: 1px solid #333;
+      outline: none;
+      width: 600px;
+      border-radius: 4px;
+      padding: 12px 8px;
+      transition: all;
+      transition-duration: 0.2s;
+      font-family: "Montserrat";
+      font-size: 15px;
+    }
+  
+    i:hover {
+      color: $callToAction;
+      filter: none;
+    }
+  }
+  
+  .icon-container {
+    border: 1px solid #333;
+    border-right: none;
+    padding: 12px 8px;
+    border-radius: 4px;
+  }
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: $texto;
+  color: $background;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+
+  a {
+    text-decoration: none;
+    opacity: 0.8;
+    color: $background;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+
+  a {
+    text-decoration: none;
+    color: $callToAction;
+    font-size: 1.3rem;
+  }
+}
+
+// DESKTOP SASS
+@media(min-width: 1025px){
+  header {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-items: center;
+      padding: 15px 60px;
+      background-color: $texto;
+      position: relative;
+    }
+
+    .nav-desplegable {
+      display: none;
+    }
+
+    .logo {
+      width: 280px;
+      height: 80px;
+      background-image: url("../../assets/images/logoDesk.png");
+    }
+
+    .menu-overlay{
+      position: static;
+      width: auto;
+      height: auto;
+      background: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      left: auto;
+      transition: none;
+    }
+    
+    .menu-close {
+      display: none;
+    }
+
+    .menu-links{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .menu {
+      flex-direction: row;
+      gap: 40px;
+
+      li a{
+        font-size: 1rem;
+        padding: 0;
+        color: $background;
+        text-decoration: none;
+        transition: color 0.2 ease;
+      }
+
+      li a:hover {
+        color: $accent;
+        text-decoration: underline;
+      }
+    }
+
+    .menu-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+
+      a{
+        padding: 8px 18px;
+        font-size: 0.95rem;
+        border-radius: 6px;
+      }
+    }
+
+    .shop_cart{
+      order: 3;
+      margin-right: 16px;
+    }
+
+    .menu-toggle{
+      display: none;
+    }
+
+    .btn-login:hover{
+      cursor: pointer;
+      transition: all;
+      transition-duration: 0.5s ;
+    }
+
+    .search-bar {
+      display: flex;
+
+      input:focus {
+        border: 1px solid $accent;
+      }
+    }
+  }
+
+  i:hover {
+    cursor: pointer;
+    filter: brightness(60%);
+    transition: all 0.2 ease;
+  }
+  
+  // FOOTER DESKTOP SASS
+
+  footer {
+    .footer-logo {
+      width: 10%;
+    }
+
+    .footer-links {
+      font-size: 1rem;
+
+      a:hover {
+        color: $accent;
+      }
+    }
+
+    .footer-socials a:hover{
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+      color: $accent;
+    }
+
+    .footer-info {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST['password'];
 
     // Preparar consulta
-    $query = $conn->prepare("SELECT customer_id, customer_name, password FROM `002customers` WHERE email = ?");
+    $query = $conn->prepare("SELECT customer_id, customer_name, password, rol FROM `002customers` WHERE email = ?");
     $query->bind_param("s", $email);
     $query->execute();
     $result = $query->get_result();
@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($user && $password === $user['password']) {
         $_SESSION['user_name'] = $user['customer_name'];
         $_SESSION['user_id'] = $user['customer_id'];
-        header("Location: /student002/shop/backend/index.php");
+        $_SESSION['role'] = $user['rol'];
+        header("Location: /student002/shop/backend/public/index.php");
         exit;
     } else {
         $error = "Correo o contraseña incorrectos";

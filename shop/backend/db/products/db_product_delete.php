@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/../config/db_connection.php';
+ require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php'; 
 
 // Eliminar un producto por ID
 function eliminarProducto($product_id) {

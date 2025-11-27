@@ -1,0 +1,118 @@
+@import "commons";
+@import "variables";
+@import "mixins";
+main {
+  min-height: 100vh;
+  justify-content: center;
+  display: flex;
+  background-color: $background;
+  color: $texto;
+  
+
+  .carrito-container{
+    width: 100%;
+    max-width: 72rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media (min-width: 1025px){
+      flex-direction: row;
+      height: calc(100vh-200px);
+    }
+
+    .lista-container {
+      background-color: #eeeeee;
+      flex: 1;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+      h2{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+      }
+  
+      .producto-elegido-container{
+        display: flex;
+        align-items: center;
+        border-radius: 0.75rem;
+        padding: 4px;
+        border: 1px solid;
+  
+        .producto-elegido{
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          
+  
+          .item_cart_image {
+            width: 10%;
+          }
+  
+          .nombre-producto{
+            font-weight: bold;
+          }
+  
+          .precio-stock-producto{
+            font-size: 14px;
+          }
+
+          .sumar-restar-eliminar {
+            display: flex;
+            gap: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .total-container {
+    width: 100%;
+    background-color: #eeeeee;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    height: fit-content;
+    @media(min-width: 1025px){
+      width: 320px;
+    }
+    
+    h2{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .producto-resumen-list{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      .producto-resumen {
+        font-weight: bold;
+      }
+    }
+
+    .total-resumen{
+      display: flex;
+      font-weight: bold;
+      justify-content: space-between;
+      .total-precio {
+        font-weight: bold;
+        color: $accent;
+      }
+    }
+
+    .btn-pedido-container {
+      display: flex;
+      margin-top: 10px;
+      justify-content: center;
+
+      .buttons {
+        width: 100%;
+      }
+    }
+  }
+}

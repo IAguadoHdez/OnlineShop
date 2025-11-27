@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/header.php'; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.php'; ?>
 
 <?php
 // Creacion de variables vacias
@@ -30,16 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
-<main class="flex justify-center items-center min-h-screen bg-background">
-    <form method="POST" action="" novalidate class="flex flex-col gap-6 items-center justify-center bg-texto shadow-2xl rounded-2xl p-10 w-full max-w-md text-background">
+<main class="flex justify-center items-center h-[calc(100vh-160px)] bg-background">
+    <form method="POST" action="" novalidate
+        class="flex flex-col gap-6 items-center justify-center bg-[#eeeeee] shadow-2xl rounded-2xl p-10 w-full max-w-md text-texto">
         <h2 class="text-3xl font-bold">LOGIN</h2>
 
         <!-- Email -->
         <div class="flex flex-col w-full">
             <label for="email" class="mb-1 text-sm font-medium">Email</label>
             <input type="email" name="email" id="email" placeholder="Enter your email"
-                value="<?= htmlspecialchars($email) ?>" class="inputs text-background placeholder:background">
+                value="<?= htmlspecialchars($email) ?>" class="inputs text-texto placeholder:background">
             <p class="text-red-500 text-sm mt-1 min-h-[1em]"><?= $emailError ?></p>
         </div>
 
@@ -47,18 +47,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="flex flex-col w-full">
             <label for="password" class="mb-1 text-sm font-medium">Password</label>
             <input type="password" name="password" id="password" placeholder="Enter your password"
-                class="inputs text-background placeholder:background">
+                class="inputs text-texto placeholder:background">
             <p class="text-red-500 text-sm mt-1 min-h-[1em]"><?= $passwordError ?></p>
         </div>
 
         <button type="submit" name="submit" class="buttons w-full">Login</button>
 
-        <p class="text-sm text-textoSecundario">¿You don't have account? <a href="#"
-                class="links text-callToAction">Regístrate</a></p>
+        <p class=" text-textoSecundario">¿No estas registrado? <a href="register.php" class="links text-accent">Regístrate</a></p>
 
-        <a href="../index.html" class=" text-textoSecundario hover:text-callToAction hover:underline text-sm">← Go back</a>
+        <a href="../index.html" class="links">← Volver atras</a>
     </form>
 </main>
 
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/footer.php'; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/footer.php'; ?>
