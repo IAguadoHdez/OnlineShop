@@ -3,13 +3,13 @@
 @use "mixins" as *;
 
 main {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; // centrado vertical
+  align-items: center; 
   background-color: $background;
   color: $texto;
-
+  
   .carrito-container {
     width: 100%;
     max-width: 72rem;
@@ -19,7 +19,7 @@ main {
 
     @media (min-width: 1025px) {
       flex-direction: row;
-      height: calc(100vh - 200px); // espacio corregido
+      height: calc(100vh - 200px);
     }
 
     .lista-container {
