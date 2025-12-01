@@ -74,5 +74,5 @@ unset($_SESSION['shipping']);
 unset($_SESSION['payment_method']);
 
 // Redirigir a página de éxito
-header("Location: /student002/shop/backend/checkout_success.php");
+header("Location: /student002/shop/backend/public/checkout_success.php");
 exit;

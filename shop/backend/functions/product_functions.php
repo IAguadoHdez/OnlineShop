@@ -2,7 +2,7 @@
 
 function showProducts($p)
 {
-    echo "<li class='bg-[#eeeeee] border-2 shadow-2xl hover:scale-101 rounded-xl p-4 w-56 flex flex-col items-center text-center transition-transform '>";
+    echo "<li class='bg-[#eeeeee] border-2 border-textoSecundario/60 shadow-2xl hover:scale-101 rounded-xl p-4 w-56 flex flex-col items-center text-center transition-transform '>";
 
     echo "<img src='{$p['product_image']}' class='w-44 h-44 object-cover mb-3 rounded-lg'>";
     echo "<strong class='text-lg font-medium mb-1 text-texto'>{$p['product_name']}</strong>";
@@ -20,7 +20,7 @@ function showProducts($p)
     <button type='submit' class='fa-solid fa-pen-to-square icono'></button>
     </form>";
 
-    echo "<form action='/student002/shop/backend/shopping_cart.php' method='POST'>
+    echo "<form action='/student002/shop/backend/public/shopping_cart.php' method='POST'>
     <input type='hidden' name='sum_product_id' value='{$p['product_id']}'>
     <button type='submit' class='fa-solid fa-cart-plus icono'></i></button>
     </form>";

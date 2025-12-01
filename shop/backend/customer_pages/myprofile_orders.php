@@ -27,7 +27,7 @@ $stmt->close();
     <h3 class="font-semibold text-xl mb-4">Pedidos recientes</h3>
 
     <?php if ($orders): ?>
-        <ul class="text-sm space-y-2">
+        <ul class="text-sm space-y-2 text-left">
             <?php foreach ($orders as $order): ?>
                 <li class="flex justify-between border-b py-2">
                     <div>

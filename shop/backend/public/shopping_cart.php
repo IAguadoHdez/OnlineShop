@@ -3,7 +3,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.ph
 include $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/db_shop_cart.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /student002/shop/backend/login.php");
+    header("Location: /student002/shop/backend/public/login.php");
     exit;
 }
 
@@ -52,7 +52,7 @@ foreach ($productos as $p) {
       <h2 class="text-2xl font-bold text-texto mb-6">Cesta de la compra</h2>
 
       <?php if ($productos): ?>
-        <ul>
+        <ul class="flex flex-col gap-2">
           <?php foreach ($productos as $p): ?>
             <li class="flex items-center justify-between py-4 border rounded-xl p-4">
               <div class="flex items-center gap-4">

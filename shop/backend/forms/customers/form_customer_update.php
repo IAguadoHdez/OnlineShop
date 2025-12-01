@@ -1,77 +1,72 @@
 <?php
-include  __DIR__ . '/../../db/db_product_update.php';
-include __DIR__ . '/../../header.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/customers/db_customer_update.php';
 
+$id = $_POST['customer_id'] ?? $_GET['customer_id'] ?? null;
 
-$id_producto = $_POST['product_id'] ?? null;
-$mensaje = '';
-$producto = null;
-
-if ($id_producto) {
-
-    $producto = obtenerProducto($id_producto);
-
-    if (!$producto) {
-        $mensaje = "No se encontró el producto.";
-    }
+if (!$id) {
+    die("ID no válido");
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update']) && $producto) {
-    $nombre = $_POST['product_name'] ?? '';
-    $precio = $_POST['product_price'] ?? 0;
-    $stock = $_POST['stock'] ?? 0;
-    $categoria = $_POST['categories'] ?? '';
+$customer = getCustomer($id);
 
-    $exito = actualizarProducto($id_producto, $nombre, $precio, $stock, $categoria);
+// Procesar actualización al hacer submit
+if (isset($_POST['update'])) {
+    $ok = updateCustomer(
+        $id,
+        $_POST['customer_name'],
+        $_POST['lastname'],
+        $_POST['email'],
+        $_POST['phone']
+    );
 
-    if ($exito) {
-        $mensaje = "Cliente actualizado correctamente.";
-    } else {
-        $mensaje = "Error al actualizar el cliente.";
+    if ($ok) {
+        header("Location: /student002/shop/backend/admin_pages/customers.php?msg=updated");
+        exit;
     }
-    $producto = obtenerProducto($id_producto);
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Actualizar cliente</title>
-</head>
-<body class="bg-[#0D0D0D] flex items-center justify-center font-sans">
 
-<div class="bg-[#1A1A1A] p-8 rounded-xl shadow-lg text-center max-w-md w-full border border-[#737373]/30 mx-auto ">
-    <h2 class="text-2xl font-bold text-[#F5F5F5] mb-6">Actualizar cliente ID <?= htmlspecialchars($id_producto) ?></h2>
+<main class="bg-background h-screen flex justify-center items-center text-texto ">
+    <div
+        class="bg-[#eeeeee] p-8 rounded-xl shadow-lg text-center max-w-md w-full border border-textoSecundario/50 max-h-150">
+        <h2 class="text-2xl font-bold text-texto mb-6">Actualizar cliente <span class="text-accent"><?= $id ?></span>
+        </h2>
 
-    <?php if ($mensaje): ?>
-        <p class="text-[#00C4CC] mb-4"><?= htmlspecialchars($mensaje) ?></p>
-    <?php endif; ?>
+        <form method="POST" class="flex flex-col gap-4 text-left">
+            <input type="hidden" name="customer_id" value="<?= $id ?>">
 
-    <?php if ($producto): ?>
-    <form method="POST" class="flex flex-col gap-4">
-        <input type="hidden" name="product_id" value="<?= htmlspecialchars($id_producto) ?>">
+            <div>
+                <label>Nombre</label>
+                <input type="text" name="customer_name" value="<?= htmlspecialchars($customer['customer_name']) ?>" class="inputs">
+            </div>
 
-        <label class="text-[#F5F5F5] text-left">Nombre:</label>
-        <input type="text" name="product_name" value="<?= htmlspecialchars($producto['product_name']) ?>" required class="p-2 rounded-lg border border-[#737373] bg-[#0D0D0D] text-[#F5F5F5]">
+            <div>
+                <label>Apellido</label>
+                <input type="text" name="lastname" value="<?= htmlspecialchars($customer['lastname']) ?>" class="inputs">
+            </div>
 
-        <label class="text-[#F5F5F5] text-left">Apellido:</label>
-        <input type="number" step="0.01" name="product_price" value="<?= $producto['product_price'] ?>" required class="p-2 rounded-lg border border-[#737373] bg-[#0D0D0D] text-[#F5F5F5]">
+            <div>
+                <label>Email</label>
+                <input type="text" name="email" value="<?= htmlspecialchars($customer['email']) ?>" class="inputs">
+            </div>
 
-        <label class="text-[#F5F5F5] text-left">Email:</label>
-        <input type="number" name="stock" value="<?= $producto['stock'] ?>" required class="p-2 rounded-lg border border-[#737373] bg-[#0D0D0D] text-[#F5F5F5]">
+            <div>
+                <label>Teléfono</label>
+                <input type="text" name="phone" value="<?= htmlspecialchars($customer['phone']) ?>" class="inputs">
+            </div>
 
-        <label class="text-[#F5F5F5] text-left">Teléfono:</label>
-        <input type="text" name="categories" value="<?= htmlspecialchars($producto['category_id']) ?>" required class="p-2 rounded-lg border border-[#737373] bg-[#0D0D0D] text-[#F5F5F5]">
+            <button type="submit" name="update" class="buttons">Guardar cambios</button>
+        </form>
 
-        <button type="submit" name="update" class="bg-[#FF4D00] text-[#F5F5F5] px-6 py-2 rounded-lg font-bold hover:bg-[#00C4CC] hover:text-[#0D0D0D] transition">
-            Guardar
-        </button>
-    </form>
-    <?php endif; ?>
 
-    <a href="../../index.php" class="block mt-6 text-sm text-[#737373] hover:text-[#00C4CC] transition">← Volver al inicio</a>
-</div>
+        <a href="/student002/shop/backend/admin_pages/customers.php"
+            class="links block mt-6 text-sm text-textoSecundario">
+            ← Volver atrás
+        </a>
+    </div>
+</main>
 
-</body>
-</html>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/footer.php'; ?>

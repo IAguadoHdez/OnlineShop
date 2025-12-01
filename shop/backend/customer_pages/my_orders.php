@@ -20,6 +20,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $orders = $result->fetch_all(MYSQLI_ASSOC);
 $stmt->close();
+
 ?>
 
     <main class="min-h-screen bg-background text-texto p-6">
@@ -38,8 +39,9 @@ $stmt->close();
                         </p>
                         <p class="mb-2 text-sm">Método de pago: <?= htmlspecialchars($order['payment_method']) ?></p>
                         <p class="mb-2 font-semibold">Total: <?= number_format($order['total_price'], 2) ?> €</p>
-                        <p class="font-semibold">Status: <span class="text-accent">Entregado</span></p>
+                        <p class="font-semibold">Estado: <span class="text-accent"><?=  htmlspecialchars($order['status']) ?></span></p>
                     </div>
+                    
                 <?php endforeach; ?>
             </div>
         <?php else: ?>
@@ -48,3 +50,5 @@ $stmt->close();
 
         <a href="/student002/shop/backend/customer_pages/myprofile.php" class="buttons  text-center w-full mt-6 inline-block">Volver a mi perfil</a>
     </main>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/footer.php'; ?>

@@ -22,12 +22,6 @@
         <input type="text" placeholder="Search..." />
       </div>
 
-      <div class="shop_cart">
-        <a href="./views/shoppingCart.html">
-          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
-        </a>
-
-      </div>
       <div class="menu-overlay">
         <div class="menu-close">
           <i class="fa-solid fa-xmark fa-xl"></i>
@@ -50,14 +44,32 @@
     <div class="carrito-container">
       <div class="lista-container">
         <h2>Cesta de la compra</h2>
-        <ul>
+        <ul class="ordenar-lista-productos">
           <li class="producto-elegido-container">
             <div class="producto-elegido">
               <img src="../assets/images/products/product1.png" class="item_cart_image">
 
               <div class="nombre-precio-container">
-                <p class="nombre-producto">Lenovo</p>
+                <p class="nombre-producto">Portatil Lenovo</p>
                 <p class="precio-stock-producto">549.99€ x 2</p>
+              </div>
+            </div>
+
+            <div class="sumar-restar-eliminar">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-minus"></i>
+            <i class="fa-solid fa-trash"></i>
+            </div>
+
+          </li>
+
+          <li class="producto-elegido-container">
+            <div class="producto-elegido">
+              <img src="../assets/images/products/product2.png" class="item_cart_image">
+
+              <div class="nombre-precio-container">
+                <p class="nombre-producto">Monitor Samsung</p>
+                <p class="precio-stock-producto">139.90€ x 1</p>
               </div>
             </div>
 
@@ -75,10 +87,12 @@
         <h2>Resumen</h2>
         <li class="producto-resumen-list">
           <div>
-            <p class="producto-resumen">Lenovo x 2</p>
+            <p class="producto-resumen">Porttil Lenovo - <span>1099,98€</span></p>
+            <p class="producto-resumen">Monitor Samsung - <span>139.90€</span></p>
           </div>
         </li>
-        <p class="total-resumen">Total: <span class="total-precio">1099,98€</span></p>
+        <hr>
+        <p class="total-resumen">Total: <span class="total-precio">1299,98€</span></p>
         <div class="btn-pedido-container">
           <button class="buttons">Realizar Pedido</button>
         </div>

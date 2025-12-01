@@ -3,7 +3,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.ph
 include $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/db_shop_cart.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /student002/shop/backend/login.php");
+    header("Location: /student002/shop/backend/public/login.php");
     exit;
 }
 
@@ -84,33 +84,13 @@ $step = intval($_GET['step'] ?? 1);
 
         <div class="flujo-de-pasos flex items-center justify-center gap-2">
             <?php if ($step === 1): ?>
-                <div class="paso1 flex flex-col items-center p-4 gap-2 bg-textoSecundario/30 rounded">
-                    <i class="fa-solid fa-location-dot fa-xl"></i>
-                    <small>Dirección de envio</small>
-                </div>
-                <hr class="w-10">
-                <div class=" paso2 flex flex-col items-center justify-center gap-2 p-4">
-                    <i class="fa-solid fa-wallet fa-xl"></i>
-                    <small>Métodos de pago</small>
-                </div>
-                <hr class="w-10">
-                <div class="paso3 p-4 flex flex-col items-center gap-2">
-                    <i class="fa-solid fa-check fa-xl"></i>
-                    <small>Confirmación de pedido</small>
-                </div>
-
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/public/checkout_steps/checkout_step1.php'; ?>
             <?php endif; ?>
             <?php if ($step === 2): ?>
-                <div class=" paso2 flex flex-col items-center justify-center gap-2 p-4 bg-textoSecundario/30 rounded">
-                    <i class="fa-solid fa-wallet fa-xl"></i>
-                    <small>Métodos de pago</small>
-                </div>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/public/checkout_steps/checkout_step2.php'; ?>
             <?php endif; ?>
             <?php if ($step === 3): ?>
-                <div class="paso3 p-4 flex flex-col items-center gap-2 bg-textoSecundario/30 rounded">
-                    <i class="fa-solid fa-check fa-xl"></i>
-                    <small>Confirmación de pedido</small>
-                </div>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/public/checkout_steps/checkout_step3.php'; ?>
             <?php endif; ?>
         </div>
 

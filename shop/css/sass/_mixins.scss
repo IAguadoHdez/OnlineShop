@@ -1,22 +1,56 @@
-@import 'commons';
+
 
 // Mixin para botones
-@mixin boton-estilo($bg-color, $text-color, $padding: 0.7rem 1rem, $radius: 0.375rem) {
+@mixin boton-estilo($bg-color, $text-color, $padding, $radius) {
   background-color: $bg-color;
   color: $text-color;
   padding: $padding;
   border-radius: $radius;
   font-weight: 600;
   cursor: pointer;
-  transition: filter 0.2s ease-in;
+  transition: filter 0.1s ease-in;
   border: none;
   font-family: 'Montserrat';
+
   &:hover {
     filter: brightness(0.7);
   }
 }
 
-// Usar el mixin
-.buttons {
-  @include boton-estilo($accent, $background);
-}
+@mixin tarjeta-producto($border-radius, $padding, $border, $icon-color, $image-width, $size-precio) {
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius;
+  padding: $padding;
+  border: $border;
+  justify-content: space-between;
+
+  i {
+    color: $icon-color;
+  }
+
+  .producto-elegido {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+
+    .item_cart_image {
+      width: $image-width;
+      height: auto;
+    }
+
+    .nombre-producto {
+      font-weight: bold;
+    }
+
+    .precio-stock-producto {
+      font-size: $size-precio;
+    }
+
+    .sumar-restar-eliminar {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+};

@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <button type="submit" name="submit" class="buttons w-full">Login</button>
 
-        <p class=" text-textoSecundario">¿No estas registrado? <a href="register.php" class="links text-accent">Regístrate</a></p>
+        <p class=" text-textoSecundario">¿No estas registrado? <a href="register.php" class="links text-calltoAction">Regístrate</a></p>
 
         <a href="../index.html" class="links">← Volver atras</a>
     </form>
