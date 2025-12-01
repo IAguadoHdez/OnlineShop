@@ -1,8 +1,8 @@
 <?php
 // Permitir peticiones desde localhost
-header('Access-Control-Allow-Origin: http://localhost:5500'); // Cambia el puerto si usas otro
+header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Headers: *');
 header('Content-Type: application/json');
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php';
