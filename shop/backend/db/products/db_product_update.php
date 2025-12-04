@@ -1,5 +1,5 @@
 <?php
- require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php'; 
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php';
 
 
 // Obtener producto por ID

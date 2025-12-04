@@ -1,0 +1,129 @@
+Date : 2025-12-03 17:54:11
+Directory : c:\wamp64\www\student002\shop
+Total : 75 files,  6602 codes, 139 comments, 658 blanks, all 7399 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| PostCSS    |          5 |      2,753 |         28 |        120 |      2,901 |
+| PHP        |         56 |      1,875 |         76 |        380 |      2,331 |
+| JSON       |          2 |      1,070 |          0 |          4 |      1,074 |
+| SCSS       |          4 |        441 |         10 |         85 |        536 |
+| HTML       |          4 |        372 |         18 |         48 |        438 |
+| JavaScript |          4 |         91 |          7 |         21 |        119 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                   |         75 |      6,602 |        139 |        658 |      7,399 |
+| . (Files)                                                                           |          3 |      1,158 |          6 |         15 |      1,179 |
+| backend                                                                             |         56 |      1,875 |         76 |        380 |      2,331 |
+| backend\admin_pages                                                                 |          3 |         97 |          2 |         20 |        119 |
+| backend\config                                                                      |          1 |         11 |          2 |          4 |         17 |
+| backend\customer_pages                                                              |          7 |        539 |         16 |         90 |        645 |
+| backend\db                                                                          |         17 |        355 |         23 |         89 |        467 |
+| backend\db (Files)                                                                  |          5 |        157 |         14 |         39 |        210 |
+| backend\db\addresses                                                                |          3 |         68 |          3 |         15 |         86 |
+| backend\db\customers                                                                |          2 |         35 |          1 |          9 |         45 |
+| backend\db\products                                                                 |          6 |         74 |          4 |         19 |         97 |
+| backend\db\reviews                                                                  |          1 |         21 |          1 |          7 |         29 |
+| backend\endpoints                                                                   |          2 |         47 |          6 |         11 |         64 |
+| backend\forms                                                                       |         13 |        305 |          2 |         65 |        372 |
+| backend\forms\customers                                                             |          5 |        156 |          1 |         36 |        193 |
+| backend\forms\products                                                              |          8 |        149 |          1 |         29 |        179 |
+| backend\functions                                                                   |          1 |         23 |          0 |          9 |         32 |
+| backend\includes                                                                    |          2 |         71 |          0 |         13 |         84 |
+| backend\public                                                                      |         10 |        427 |         25 |         79 |        531 |
+| backend\public (Files)                                                              |          7 |        385 |         25 |         79 |        489 |
+| backend\public\checkout_steps                                                       |          3 |         42 |          0 |          0 |         42 |
+| css                                                                                 |          9 |      3,194 |         38 |        205 |      3,437 |
+| css (Files)                                                                         |          4 |      2,339 |         26 |        110 |      2,475 |
+| css\sass                                                                            |          5 |        855 |         12 |         95 |        962 |
+| js                                                                                  |          4 |         91 |          7 |         21 |        119 |
+| views                                                                               |          3 |        284 |         12 |         37 |        333 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                            | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\wamp64\www\student002\shop\backend\admin_pages\customers.php                     | PHP        |         37 |          1 |          7 |         45 |
+| c:\wamp64\www\student002\shop\backend\admin_pages\orders.php                        | PHP        |         38 |          1 |          8 |         47 |
+| c:\wamp64\www\student002\shop\backend\admin_pages\products.php                      | PHP        |         22 |          0 |          5 |         27 |
+| c:\wamp64\www\student002\shop\backend\config\db_connection.php                      | PHP        |         11 |          2 |          4 |         17 |
+| c:\wamp64\www\student002\shop\backend\customer_pages\my_orders.php                  | PHP        |         48 |          1 |          8 |         57 |
+| c:\wamp64\www\student002\shop\backend\customer_pages\my_orders_reviews.php          | PHP        |         81 |          2 |         11 |         94 |
+| c:\wamp64\www\student002\shop\backend\customer_pages\my_reviews.php                 | PHP        |        146 |          7 |         27 |        180 |
+| c:\wamp64\www\student002\shop\backend\customer_pages\myprofile.php                  | PHP        |         88 |          3 |         18 |        109 |
+| c:\wamp64\www\student002\shop\backend\customer_pages\myprofile_addresses.php        | PHP        |         93 |          0 |         16 |        109 |
+| c:\wamp64\www\student002\shop\backend\customer_pages\myprofile_orders.php           | PHP        |         45 |          2 |          5 |         52 |
+| c:\wamp64\www\student002\shop\backend\customer_pages\myprofile_reviews.php          | PHP        |         38 |          1 |          5 |         44 |
+| c:\wamp64\www\student002\shop\backend\db\addresses\db_addresses_delete.php          | PHP        |         17 |          1 |          5 |         23 |
+| c:\wamp64\www\student002\shop\backend\db\addresses\db_addresses_insert.php          | PHP        |         23 |          1 |          4 |         28 |
+| c:\wamp64\www\student002\shop\backend\db\addresses\db_addresses_update.php          | PHP        |         28 |          1 |          6 |         35 |
+| c:\wamp64\www\student002\shop\backend\db\customers\db_customer_delete.php           | PHP        |         13 |          1 |          7 |         21 |
+| c:\wamp64\www\student002\shop\backend\db\customers\db_customer_update.php           | PHP        |         22 |          0 |          2 |         24 |
+| c:\wamp64\www\student002\shop\backend\db\db_checkout.php                            | PHP        |         58 |          6 |         15 |         79 |
+| c:\wamp64\www\student002\shop\backend\db\db_login.php                               | PHP        |         21 |          2 |          4 |         27 |
+| c:\wamp64\www\student002\shop\backend\db\db_logout.php                              | PHP        |          5 |          0 |          0 |          5 |
+| c:\wamp64\www\student002\shop\backend\db\db_register.php                            | PHP        |         19 |          1 |          8 |         28 |
+| c:\wamp64\www\student002\shop\backend\db\db_shop_cart.php                           | PHP        |         54 |          5 |         12 |         71 |
+| c:\wamp64\www\student002\shop\backend\db\products\db_getproducts.php                | PHP        |          5 |          1 |          1 |          7 |
+| c:\wamp64\www\student002\shop\backend\db\products\db_insert_image.php               | PHP        |         22 |          0 |          4 |         26 |
+| c:\wamp64\www\student002\shop\backend\db\products\db_product_delete.php             | PHP        |         13 |          1 |          4 |         18 |
+| c:\wamp64\www\student002\shop\backend\db\products\db_product_insert.php             | PHP        |         14 |          0 |          5 |         19 |
+| c:\wamp64\www\student002\shop\backend\db\products\db_product_select.php             | PHP        |          0 |          0 |          1 |          1 |
+| c:\wamp64\www\student002\shop\backend\db\products\db_product_update.php             | PHP        |         20 |          2 |          4 |         26 |
+| c:\wamp64\www\student002\shop\backend\db\reviews\db_reviews_insert.php              | PHP        |         21 |          1 |          7 |         29 |
+| c:\wamp64\www\student002\shop\backend\endpoints\getProductsFront.php                | PHP        |         22 |          2 |          6 |         30 |
+| c:\wamp64\www\student002\shop\backend\endpoints\getproducts.php                     | PHP        |         25 |          4 |          5 |         34 |
+| c:\wamp64\www\student002\shop\backend\forms\customers\form_customer_delete.php      | PHP        |         33 |          0 |          6 |         39 |
+| c:\wamp64\www\student002\shop\backend\forms\customers\form_customer_delete_call.php | PHP        |          4 |          0 |          0 |          4 |
+| c:\wamp64\www\student002\shop\backend\forms\customers\form_customer_insert.php      | PHP        |         58 |          0 |         14 |         72 |
+| c:\wamp64\www\student002\shop\backend\forms\customers\form_customer_update.php      | PHP        |         57 |          1 |         16 |         74 |
+| c:\wamp64\www\student002\shop\backend\forms\customers\form_customer_update_call.php | PHP        |          4 |          0 |          0 |          4 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_add_to_cart.php           | PHP        |          4 |          0 |          0 |          4 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_product_delete.php        | PHP        |         32 |          0 |          4 |         36 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_product_delete_call.php   | PHP        |          4 |          0 |          0 |          4 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_product_insert.php        | PHP        |         47 |          0 |          9 |         56 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_product_insert_call.php   | PHP        |          3 |          0 |          0 |          3 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_product_select.php        | PHP        |         13 |          0 |          5 |         18 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_product_update.php        | PHP        |         42 |          1 |         11 |         54 |
+| c:\wamp64\www\student002\shop\backend\forms\products\form_product_update_call.php   | PHP        |          4 |          0 |          0 |          4 |
+| c:\wamp64\www\student002\shop\backend\functions\product_functions.php               | PHP        |         23 |          0 |          9 |         32 |
+| c:\wamp64\www\student002\shop\backend\includes\footer.php                           | PHP        |         12 |          0 |          0 |         12 |
+| c:\wamp64\www\student002\shop\backend\includes\header.php                           | PHP        |         59 |          0 |         13 |         72 |
+| c:\wamp64\www\student002\shop\backend\public\checkout.php                           | PHP        |        150 |          7 |         21 |        178 |
+| c:\wamp64\www\student002\shop\backend\public\checkout_steps\checkout_step1.php      | PHP        |         14 |          0 |          0 |         14 |
+| c:\wamp64\www\student002\shop\backend\public\checkout_steps\checkout_step2.php      | PHP        |         14 |          0 |          0 |         14 |
+| c:\wamp64\www\student002\shop\backend\public\checkout_steps\checkout_step3.php      | PHP        |         14 |          0 |          0 |         14 |
+| c:\wamp64\www\student002\shop\backend\public\checkout_success.php                   | PHP        |         16 |          1 |          5 |         22 |
+| c:\wamp64\www\student002\shop\backend\public\index.php                              | PHP        |          5 |          0 |          4 |          9 |
+| c:\wamp64\www\student002\shop\backend\public\login.php                              | PHP        |         46 |          5 |         12 |         63 |
+| c:\wamp64\www\student002\shop\backend\public\logout.php                             | PHP        |          3 |          0 |          0 |          3 |
+| c:\wamp64\www\student002\shop\backend\public\register.php                           | PHP        |         72 |          8 |         18 |         98 |
+| c:\wamp64\www\student002\shop\backend\public\shopping_cart.php                      | PHP        |         93 |          4 |         19 |        116 |
+| c:\wamp64\www\student002\shop\css\commons.css                                       | PostCSS    |        279 |         10 |         52 |        341 |
+| c:\wamp64\www\student002\shop\css\index.css                                         | PostCSS    |         47 |          7 |         16 |         70 |
+| c:\wamp64\www\student002\shop\css\main.css                                          | PostCSS    |        266 |          8 |         41 |        315 |
+| c:\wamp64\www\student002\shop\css\output.css                                        | PostCSS    |      1,747 |          1 |          1 |      1,749 |
+| c:\wamp64\www\student002\shop\css\sass\_commons.scss                                | SCSS       |        283 |          7 |         53 |        343 |
+| c:\wamp64\www\student002\shop\css\sass\_mixins.scss                                 | SCSS       |         44 |          1 |         11 |         56 |
+| c:\wamp64\www\student002\shop\css\sass\_variables.scss                              | SCSS       |         10 |          2 |          4 |         16 |
+| c:\wamp64\www\student002\shop\css\sass\cart.css                                     | PostCSS    |        414 |          2 |         10 |        426 |
+| c:\wamp64\www\student002\shop\css\sass\cart.scss                                    | SCSS       |        104 |          0 |         17 |        121 |
+| c:\wamp64\www\student002\shop\index.html                                            | HTML       |         88 |          6 |         11 |        105 |
+| c:\wamp64\www\student002\shop\js\backend_products.js                                | JavaScript |         16 |          2 |          4 |         22 |
+| c:\wamp64\www\student002\shop\js\commons.js                                         | JavaScript |         36 |          5 |          6 |         47 |
+| c:\wamp64\www\student002\shop\js\detailProducts.js                                  | JavaScript |          2 |          0 |          1 |          3 |
+| c:\wamp64\www\student002\shop\js\frontend_products.js                               | JavaScript |         37 |          0 |         10 |         47 |
+| c:\wamp64\www\student002\shop\package-lock.json                                     | JSON       |      1,061 |          0 |          1 |      1,062 |
+| c:\wamp64\www\student002\shop\package.json                                          | JSON       |          9 |          0 |          3 |         12 |
+| c:\wamp64\www\student002\shop\views\productDetail.html                              | HTML       |        163 |         10 |         24 |        197 |
+| c:\wamp64\www\student002\shop\views\products.html                                   | HTML       |         10 |          0 |          1 |         11 |
+| c:\wamp64\www\student002\shop\views\shoppingCart.html                               | HTML       |        111 |          2 |         12 |        125 |
+| Total                                                                               |            |      6,602 |        139 |        658 |      7,399 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

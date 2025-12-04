@@ -21,6 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     } else {
         $error = "Correo o contraseña incorrectos";
-        header("Location: /student002/shop/backend/login.php");
+        header("Location: /student002/shop/backend/public/login.php");
     }
 }

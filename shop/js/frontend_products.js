@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const destacadosContainer = document.getElementById("productosDestacadosContainer");
-  const normalesContainer = document.getElementById("productosNormalesContainer");
+  const destacadosContainer = document.getElementById(
+    "productosDestacadosContainer"
+  );
+  const normalesContainer = document.getElementById(
+    "productosNormalesContainer"
+  );
 
   async function callSearchProducts(strProduct = "") {
-    const url = "/student002/shop/backend/functions/getProductsFront.php?q=" + encodeURIComponent(strProduct);
+    const url =
+      "/student002/shop/backend/endpoints/getProductsFront.php?q=" +
+      encodeURIComponent(strProduct);
 
     try {
       const response = await fetch(url);
@@ -36,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (productos.length === 0) {
         normalesContainer.innerHTML = "<p>No se encontraron productos.</p>";
       }
-
     } catch (error) {
       console.error("Error al cargar los productos:", error);
     }

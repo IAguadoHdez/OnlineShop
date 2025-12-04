@@ -27,7 +27,7 @@
         echo $name;
         if (!$_SESSION) {
           echo ' no ha iniciado sesión';
-          echo "<a href='/student002/shop/backend/publiclogin.php'> <button class='fa-solid fa-arrow-right-to-bracket cursor-pointer icono'></button></a>";
+          echo "<a href='/student002/shop/backend/public/login.php'> <button class='fa-solid fa-arrow-right-to-bracket cursor-pointer icono'></button></a>";
         } else if ($_SESSION) {
           echo "<i class='fa-regular fa-user icono'></i>";
 
@@ -43,7 +43,7 @@
 
         <a href="/student002/shop/index.html" class="links">Volver a tienda </a>
         <a href="/student002/shop/backend/admin_pages/products.php" class="links"> Productos </a>
-        
+
         <?php if ($role === 'admin'): ?>
 
           <a href="/student002/shop/backend/admin_pages/customers.php" class="links"> Clientes </a>

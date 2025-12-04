@@ -1,8 +1,9 @@
 <?php
- require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php'; 
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php';
 
-// Insertar un nuevo producto con imagen
-function insertarProducto($nombre, $precio, $cantidad, $categoria_id, $imagen) {
+
+function insertarProducto($nombre, $precio, $cantidad, $categoria_id, $imagen)
+{
     global $connection;
 
     $query = $connection->prepare(

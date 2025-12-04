@@ -11,7 +11,6 @@
 }
 
 @layer components {
-
   /* COMPONENTES PARA PODER USAR EL NAV DESPLEGABLE CON TAILWIND */
   .menu-overlay {
     @apply fixed top-0 -left-[250px] w-[250px] h-full bg-texto transition-all duration-300 z-999 flex flex-col justify-between p-5 lg:static lg:left-0 lg:w-auto lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:gap-4;
@@ -63,8 +62,7 @@
   }
 
   /* Componente de tarjeta de review reutilizable */
-  .review-card{
+  .review-card {
     @apply bg-[#eeeeee] p-3 rounded-xl shadow-md flex flex-col gap-2 hover:scale-101 transition-all;
   }
-  
 }

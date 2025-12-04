@@ -1,8 +1,9 @@
 <?php
- require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php'; 
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connection.php';
 
 // Eliminar un producto por ID
-function eliminarProducto($product_id) {
+function eliminarProducto($product_id)
+{
     global $conn;
 
     $query = $conn->prepare("DELETE FROM 002products WHERE product_id = ?");

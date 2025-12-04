@@ -28,7 +28,8 @@ $productoEliminado = ($id && $confirmado) ? eliminarProducto($id) : null;
                 <a href="../../index.php" class="buttons w-[100px] bg-accent text-background hover:bg-callToAction hover:text-texto">Cancelar</a>
             </form>' : ''
             ?>
-        <a href="/student002/shop/backend/admin_pages/products.php" class="block mt-6 text-sm text-textoSecundario hover:text-accent transition">←
+        <a href="/student002/shop/backend/admin_pages/products.php"
+            class="block mt-6 text-sm text-textoSecundario hover:text-accent transition">←
             Volver atras</a>
     </div>
 

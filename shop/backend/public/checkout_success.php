@@ -14,7 +14,8 @@ if (!isset($_SESSION['user_id'])) {
         <p class="mb-6">Gracias por tu compra. Tu compra esta siendo procesada</p>
 
         <a href="/student002/shop/index.html" class="buttons w-full block mb-4">Volver a inicio</a>
-        <a href="/student002/shop/backend/shopping_cart.php" class="links block text-sm text-texto-secundario">Ver carrito</a>
+        <a href="/student002/shop/backend/shopping_cart.php" class="links block text-sm text-texto-secundario">Ver
+            carrito</a>
     </div>
 </main>
 

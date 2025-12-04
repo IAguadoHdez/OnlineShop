@@ -1,4 +1,4 @@
-<?php 
+<?php
 $id = $_SESSION['user_id'] ?? null;
 if (!$id) {
   header("Location: /student002/shop/backend/login.php");
@@ -13,13 +13,13 @@ $sql = "SELECT address_id, street, floor, city, zipcode, country
 $result = mysqli_query($conn, $sql);
 
 if ($result && mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $addresses[] = $row;
-    }
+  while ($row = mysqli_fetch_assoc($result)) {
+    $addresses[] = $row;
+  }
 }
 ?>
 
-<div class="relative flex flex-col bg-[#eeeeee] shadow-2xl rounded-2xl p-4 w-full hover:scale-101 transition-all h-70">
+<div class="relative flex flex-col bg-[#eeeeee] shadow-2xl rounded-2xl p-4 w-full h-70">
   <h3 class="font-semibold text-xl">Direcciones de envío</h3>
 
   <?php if (!empty($addresses)): ?>
@@ -27,13 +27,12 @@ if ($result && mysqli_num_rows($result) > 0) {
       <?php foreach ($addresses as $index => $addr): ?>
         <li class="border p-2 rounded flex justify-between items-center">
           <!-- Mostrar resumen de la dirección del cliente -->
-            <?= htmlspecialchars($addr['street']) ?>, <?= htmlspecialchars($addr['city']) ?>
+          <?= htmlspecialchars($addr['street']) ?>, <?= htmlspecialchars($addr['city']) ?>
           </span>
 
           <div class="flex gap-2">
             <!-- Editar -->
-            <button type="button" class="icono fa-solid fa-pen-to-square"
-              onclick="openEditPopup(
+            <button type="button" class="icono fa-solid fa-pen-to-square" onclick="openEditPopup(
                 '<?= $addr['address_id'] ?>',
                 '<?= htmlspecialchars($addr['street'], ENT_QUOTES) ?>',
                 '<?= htmlspecialchars($addr['floor'], ENT_QUOTES) ?>',
@@ -44,7 +43,8 @@ if ($result && mysqli_num_rows($result) > 0) {
             </button>
 
             <!-- Eliminar -->
-            <button type="button" class="icono fa-solid fa-trash" onclick="openDeletePopup('<?= $addr['address_id'] ?>')"></button>
+            <button type="button" class="icono fa-solid fa-trash"
+              onclick="openDeletePopup('<?= $addr['address_id'] ?>')"></button>
           </div>
         </li>
       <?php endforeach; ?>
@@ -100,7 +100,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <input type="text" name="zipcode" placeholder="Código Postal" class="inputs" required>
         <input type="text" name="country" placeholder="País" class="inputs" required>
         <button type="submit" name="add_address" class="buttons w-full">Guardar dirección</button>
-        </form>
+      </form>
       <button type="button" onclick="closePopup()" class="buttons  w-full">Cerrar</button>
     </div>
   </div>

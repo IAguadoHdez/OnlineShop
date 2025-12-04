@@ -9,13 +9,13 @@ if (!$id) {
 }
 
 if (isset($_POST['delete_address_id'])) {
-    $delete_id = intval($_POST['delete_address_id']);
+  $delete_id = intval($_POST['delete_address_id']);
 
-    // Preparar la consulta
-    $stmt = $conn->prepare("DELETE FROM 002addresses WHERE address_id = ? AND customer_id = ?");
-    $stmt->bind_param("ii", $delete_id, $id);
-    $stmt->execute();
-    $stmt->close();
+  // Preparar la consulta
+  $stmt = $conn->prepare("DELETE FROM 002addresses WHERE address_id = ? AND customer_id = ?");
+  $stmt->bind_param("ii", $delete_id, $id);
+  $stmt->execute();
+  $stmt->close();
 }
 
 header("Location: /student002/shop/backend/customer_pages/myprofile.php");

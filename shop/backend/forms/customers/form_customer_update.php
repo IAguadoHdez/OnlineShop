@@ -40,12 +40,14 @@ if (isset($_POST['update'])) {
 
             <div>
                 <label>Nombre</label>
-                <input type="text" name="customer_name" value="<?= htmlspecialchars($customer['customer_name']) ?>" class="inputs">
+                <input type="text" name="customer_name" value="<?= htmlspecialchars($customer['customer_name']) ?>"
+                    class="inputs">
             </div>
 
             <div>
                 <label>Apellido</label>
-                <input type="text" name="lastname" value="<?= htmlspecialchars($customer['lastname']) ?>" class="inputs">
+                <input type="text" name="lastname" value="<?= htmlspecialchars($customer['lastname']) ?>"
+                    class="inputs">
             </div>
 
             <div>

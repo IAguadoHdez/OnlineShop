@@ -14,7 +14,7 @@ $stmt = $conn->prepare("
     FROM 002orders
     WHERE customer_id = ?
     ORDER BY placed_on DESC
-    LIMIT 5
+    LIMIT 2
 ");
 $stmt->bind_param("i", $customer_id);
 $stmt->execute();
@@ -23,7 +23,7 @@ $orders = $result->fetch_all(MYSQLI_ASSOC);
 $stmt->close();
 ?>
 
-<div class="bg-[#eeeeee] hover:scale-101 transition-all rounded-2xl p-4 w-full shadow-xl h-70">
+<div class="bg-[#eeeeee]  rounded-2xl p-4 w-full shadow-xl h-70">
     <h3 class="font-semibold text-xl mb-4">Pedidos recientes</h3>
 
     <?php if ($orders): ?>
@@ -43,7 +43,8 @@ $stmt->close();
                 </li>
             <?php endforeach; ?>
         </ul>
-        <button onclick="window.location.href='/student002/shop/backend/customer_pages/my_orders.php'" class="buttons p-2 w-full mt-4">Ver todo</button>
+        <button onclick="window.location.href='/student002/shop/backend/customer_pages/my_orders.php'"
+            class="buttons p-2 w-full mt-4">Ver todo</button>
 
     <?php else: ?>
         <p>No hay pedidos.</p>

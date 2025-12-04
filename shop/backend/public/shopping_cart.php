@@ -1,32 +1,32 @@
-<?php 
-require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.php'; 
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/db_shop_cart.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /student002/shop/backend/public/login.php");
-    exit;
+  header("Location: /student002/shop/backend/public/login.php");
+  exit;
 }
 
 if ($_SESSION['role'] !== 'customer' && $_SESSION['role'] !== 'admin') {
-    die("Acceso denegado");
+  die("Acceso denegado");
 }
 
 // Sumar producto del carrito
 if (isset($_POST['sum_product_id'])) {
-    $idProducto = (int) $_POST['sum_product_id'];
-    agregarOActualizarProducto($idProducto);
+  $idProducto = (int) $_POST['sum_product_id'];
+  agregarOActualizarProducto($idProducto);
 }
 
 // Restar producto del carrito
 if (isset($_POST['sub_product_id'])) {
-    $idProducto = (int) $_POST['sub_product_id'];
-    restarProducto($idProducto);
+  $idProducto = (int) $_POST['sub_product_id'];
+  restarProducto($idProducto);
 }
 
 // Eliminar producto del carrito
 if (isset($_POST['delete_cart_id'])) {
-    $idCarrito = (int) $_POST['delete_cart_id'];
-    eliminarProducto($idCarrito);
+  $idCarrito = (int) $_POST['delete_cart_id'];
+  eliminarProducto($idCarrito);
 }
 
 // Obtener productos del carrito
@@ -40,7 +40,7 @@ $productos = mysqli_fetch_all($result, MYSQLI_ASSOC);
 $total = 0;
 
 foreach ($productos as $p) {
-    $total += $p['product_price'] * $p['quantity'];
+  $total += $p['product_price'] * $p['quantity'];
 }
 
 ?>
@@ -89,7 +89,7 @@ foreach ($productos as $p) {
     <!-- Total -->
     <div class="w-full lg:w-80 bg-[#eeeeee] p-6 rounded-xl shadow-lg h-fit">
       <h2 class="text-2xl font-bold mb-4 text-left">Resumen</h2>
-      
+
       <?php foreach ($productos as $p): ?>
         <li class="flex items-center justify-between py-4">
           <div>
@@ -98,7 +98,8 @@ foreach ($productos as $p) {
         </li>
       <?php endforeach; ?>
 
-      <p class="text-lg mb-6">Total: <span class="font-semibold text-call-to-action"><?= number_format($total, 2) ?> €</span></p>
+      <p class="text-lg mb-6">Total: <span class="font-semibold text-call-to-action"><?= number_format($total, 2) ?>
+          €</span></p>
 
       <?php if ($productos): ?>
         <a href="checkout.php" class="buttons w-full text-center block">Realizar pedido</a>
@@ -107,7 +108,8 @@ foreach ($productos as $p) {
         <p class="text-center text-sm text-background/60 mt-2">Añade productos a la cesta primero</p>
       <?php endif; ?>
 
-      <a href="/student002/shop/backend/admin_pages/products.php" class="links block mt-6 text-sm text-texto-secundario transition text-center">← Volver atras</a>
+      <a href="/student002/shop/backend/admin_pages/products.php"
+        class="links block mt-6 text-sm text-texto-secundario transition text-center">← Volver atras</a>
     </div>
   </div>
 </main>

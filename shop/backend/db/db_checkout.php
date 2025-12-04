@@ -55,7 +55,7 @@ foreach ($productos as $p) {
         $shipping['city'],
         $shipping['country'],
         $payment_method,
-        $placed_on 
+        $placed_on
     );
 
 

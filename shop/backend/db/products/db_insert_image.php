@@ -1,5 +1,6 @@
 <?php
-function subirImagenPNG($fileInput) {
+function subirImagenPNG($fileInput)
+{
     if (isset($fileInput) && $fileInput['error'] === UPLOAD_ERR_OK) {
         $fileTmpPath = $fileInput['tmp_name'];
         $fileName = $fileInput['name'];
@@ -10,7 +11,8 @@ function subirImagenPNG($fileInput) {
         }
 
         $uploadDir = __DIR__ . '/../../uploads/';
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
+        if (!is_dir($uploadDir))
+            mkdir($uploadDir, 0755, true);
 
         $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
         $destPath = $uploadDir . $newFileName;

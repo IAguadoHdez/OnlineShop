@@ -15,7 +15,7 @@ function eliminarCliente($id)
   $query->close();
   return $eliminado;
 
-  
+
 }
 
 ?>
