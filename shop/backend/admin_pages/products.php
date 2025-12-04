@@ -3,13 +3,12 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/products/db_getproducts.php'; ?>
 
 <main class="px-4 md:px-8 lg:px-16 py-8 bg-background/90">
-    <h1 class="text-3xl font-semibold text-center text-texto mb-8">Products</h1>
+    <h1 class="text-3xl font-semibold text-center text-texto mb-8">Productos</h1>
     
     <div class='flex my-5 mx-10 w-full relative'>
         <div>
             <form action="" class="flex gap-2">
-                <button id="btn-buscar" class="icono fa-solid fa-magnifying-glass fa-xl"></button>
-                <input id="searchProduct" type="text" name="product_name" class="inputs focus:border-accent border rounded-xl w-[1000px] text-xl" placeholder="Buscar producto"/>
+                <input id="searchProduct" type="text" name="product_name" class="inputs" placeholder="Buscar productos..."/>
             </form>
         </div>
         <div class="absolute right-15">

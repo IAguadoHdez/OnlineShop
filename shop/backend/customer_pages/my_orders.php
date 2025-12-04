@@ -27,7 +27,7 @@ $stmt->close();
         <h1 class="text-3xl font-bold mb-6">Todos mis pedidos</h1>
 
         <?php if ($orders): ?>
-            <div class="grid gap-6">
+            <div class="grid gap-6 ">
                 <?php foreach ($orders as $order): ?>
                     <div class="bg-[#eeeeee] p-4 rounded-xl shadow-lg">
                         <div class="flex justify-between mb-2">
@@ -50,5 +50,5 @@ $stmt->close();
 
         <a href="/student002/shop/backend/customer_pages/myprofile.php" class="buttons  text-center w-full mt-6 inline-block">Volver a mi perfil</a>
     </main>
-
+scrip
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/footer.php'; ?>
