@@ -33,6 +33,7 @@ $stmt->close();
                     <div class="flex justify-between mb-2">
                         <span class="font-semibold">Pedido #<?= $order['order_id'] ?></span>
                         <span class="text-texto"><?= date("d/m/Y", strtotime($order['placed_on'])) ?></span>
+
                     </div>
                     <p class="mb-2 text-sm">
                         Envío:
