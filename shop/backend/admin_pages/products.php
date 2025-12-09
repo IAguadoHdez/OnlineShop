@@ -1,7 +1,18 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/functions/product_functions.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/products/db_getproducts.php'; ?>
+<?php 
 
+if (!isset($_SESSION['user_id'])) {
+  header("Location: /student002/shop/backend/public/login.php");
+  exit;
+}
+
+if ($_SESSION['role'] !== 'customer' && $_SESSION['role'] !== 'admin') {
+  die("Acceso denegado");
+}
+
+?>
 <main class="px-4 md:px-8 lg:px-16 py-8 bg-background/90">
     <h1 class="text-3xl font-semibold text-center text-texto mb-8">Productos</h1>
     

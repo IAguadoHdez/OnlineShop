@@ -4,6 +4,15 @@ require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/config/db_connecti
 ?>
 <?php
 
+if (!isset($_SESSION['user_id'])) {
+  header("Location: /student002/shop/backend/public/login.php");
+  exit;
+}
+
+if ($_SESSION['role'] !== 'customer' && $_SESSION['role'] !== 'admin') {
+  die("Acceso denegado");
+}
+
 // Traer todas los clientes al cargar la página
 $stmt = $conn->prepare("SELECT * FROM 002customers ORDER BY customer_id DESC");
 $stmt->execute();
