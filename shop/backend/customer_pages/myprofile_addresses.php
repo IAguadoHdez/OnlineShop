@@ -33,13 +33,13 @@ if ($result && mysqli_num_rows($result) > 0) {
           <div class="flex gap-2">
             <!-- Editar -->
             <button type="button" class="icono fa-solid fa-pen-to-square" onclick="openEditPopup(
-                '<?= $addr['address_id'] ?>',
-                '<?= htmlspecialchars($addr['street'], ENT_QUOTES) ?>',
-                '<?= htmlspecialchars($addr['floor'], ENT_QUOTES) ?>',
-                '<?= htmlspecialchars($addr['city'], ENT_QUOTES) ?>',
-                '<?= htmlspecialchars($addr['zipcode'], ENT_QUOTES) ?>',
-                '<?= htmlspecialchars($addr['country'], ENT_QUOTES) ?>'
-              )">
+              '<?= $addr['address_id'] ?>',
+              '<?= htmlspecialchars($addr['street'], ENT_QUOTES) ?>',
+              '<?= htmlspecialchars($addr['floor'], ENT_QUOTES) ?>',
+              '<?= htmlspecialchars($addr['city'], ENT_QUOTES) ?>',
+              '<?= htmlspecialchars($addr['zipcode'], ENT_QUOTES) ?>',
+              '<?= htmlspecialchars($addr['country'], ENT_QUOTES) ?>'
+            )">
             </button>
 
             <!-- Eliminar -->
@@ -57,7 +57,7 @@ if ($result && mysqli_num_rows($result) > 0) {
   <button type="button" class="buttons p-2 w-full mt-4" onclick="openPopup()">Añadir dirección</button>
 
   <!-- Popup para confirmar eliminar dirección -->
-  <div id="deletePopup" class="hidden absolute inset-0 flex items-center justify-center bg-black/50 z-50">
+  <div id="deletePopup" class="hidden absolute inset-0 flex items-center justify-center bg-black/50 z-50 rounded-xl">
     <div class="bg-[#eeeeee] rounded-lg shadow-lg p-6 w-full max-w-md">
       <h3 class="font-semibold text-xl mb-4">¿Eliminar dirección?</h3>
 
@@ -71,7 +71,7 @@ if ($result && mysqli_num_rows($result) > 0) {
   </div>
 
   <!-- Popup para editar dirección -->
-  <div id="editPopup" class="hidden absolute inset-0 flex items-center justify-center bg-black/50 z-50">
+  <div id="editPopup" class="hidden absolute inset-0 flex items-center justify-center bg-black/50 z-50 rounded-xl">
     <div class="bg-[#eeeeee] rounded-lg shadow-lg p-6 w-full max-w-md flex flex-col gap-2">
       <h3 class="font-semibold text-xl mb-4">Editar dirección</h3>
 
@@ -90,7 +90,7 @@ if ($result && mysqli_num_rows($result) > 0) {
   </div>
 
   <!-- Popup para añadir dirección -->
-  <div id="addressPopup" class="hidden absolute inset-0 flex items-center justify-center bg-black/50 z-50">
+  <div id="addressPopup" class="hidden absolute inset-0 flex items-center justify-center bg-black/50 z-50 rounded-xl">
     <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md flex flex-col gap-2">
       <h3 class="font-semibold text-xl mb-4">Nueva dirección</h3>
       <form method="POST" action="/student002/shop/backend/db/db_addresses_insert.php" class="flex flex-col gap-2">
