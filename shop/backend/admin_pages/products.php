@@ -13,7 +13,7 @@ if ($_SESSION['role'] !== 'customer' && $_SESSION['role'] !== 'admin') {
 }
 
 ?>
-<main class="px-4 md:px-8 lg:px-16 py-8 bg-background/90">
+<main class="px-4 md:px-8 lg:px-16 py-8 bg-background">
     <h1 class="text-3xl font-semibold text-center text-texto mb-8">Productos</h1>
     
     <div class='flex my-5 mx-10 w-full relative'>

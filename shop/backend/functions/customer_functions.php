@@ -2,7 +2,7 @@
 
 function showCustomer($c)
 {
-  echo "<li class='bg-[#eeeeee] border-2 border-textoSecundario/60 shadow-2xl hover:scale-101 rounded-xl p-4 w-56 flex flex-col items-center text-center transition-transform '>";
+  echo "<li class='bg-[#eeeeee]  shadow-2xl hover:scale-101 rounded-xl p-4 w-56 flex flex-col items-center text-center transition-transform '>";
 
   echo "<strong class='text-lg font-medium mb-1 text-texto'>Nombre: {$c['customer_name']}, {$c['lastname']}</strong>";
   echo "<p class='text-texto mb-3'><span class='font-semibold'>Email: {$c['email']}</p>";
