@@ -1,26 +1,18 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/header.php'; ?>
-
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/products/db_product_insert.php'; ?>
-
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/products/db_insert_image.php'; ?>
-
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/products/db_product_insert.php';
+
 $productoInsertado = null;
+$nombreProducto = '';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $imagePath = null;
-    if (isset($_FILES['product_image'])) {
-        $imagePath = subirImagenPNG($_FILES['product_image']);
-    }
+    $nombreProducto = $_POST['product_name'] ?? '';
+    $precio = $_POST['product_price'] ?? '';
+    $cantidad = $_POST['quantity'] ?? '';
+    $categoria_id = $_POST['category_id'] ?? '';
 
-    if ($imagePath) {
-        $productoInsertado = insertarProducto(
-            $_POST['product_name'],
-            $_POST['product_price'],
-            $_POST['stock'],
-            $_POST['category_id'],
-            $imagePath
-        );
+    if ($nombreProducto && $precio && $cantidad && $categoria_id) {
+        $productoInsertado = insertarProducto($nombreProducto, $precio, $cantidad, $categoria_id);
     } else {
         $productoInsertado = false;
     }
@@ -29,23 +21,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <main class="bg-background h-screen">
     <div class="fixed inset-0 flex items-center justify-center z-50">
-        <div
-            class="bg-[#eeeeee] p-10 rounded-2xl shadow-2xl text-center max-w-md w-full border border-textoSecundario/30">
-
+        <div class="bg-[#eeeeee] p-10 rounded-2xl shadow-2xl text-center max-w-md w-full border border-textoSecundario/30">
             <?php if ($productoInsertado === true): ?>
                 <h1 class="text-2xl font-bold mb-6 text-texto">Producto insertado</h1>
                 <p class="mb-8 text-texto">
-                    El producto <span class="text-accent font-semibold"><?= ($_POST['product_name']) ?></span> se ha
-                    insertado correctamente.
+                    El producto <span class="text-accent font-semibold"><?= htmlspecialchars($nombreProducto) ?></span> se
+                    ha insertado correctamente.
                 </p>
-            <?php endif; ?>
-
+                <?php endif; ?>
             <h1 class="text-2xl font-bold mb-6 text-texto">Insertar Producto</h1>
-            <form method="POST" enctype="multipart/form-data" class="flex flex-col items-center space-y-4">
-                <input type="text" name="product_name" placeholder="Nombre del producto" required class="inputs">
-                <input type="text" name="product_price" placeholder="Precio del producto" required class="inputs">
-                <input type="number" name="stock" placeholder="Cantidad" required class="inputs">
-                <input type="number" name="category_id" placeholder="ID de la categoría" required class="inputs">
+            <form method="POST" class="flex flex-col items-center space-y-4">
+                <input type="text" name="product_name" placeholder="Nombre del producto" required class="inputs"
+                    value="<?= htmlspecialchars($nombreProducto) ?>">
+                <input type="text" name="product_price" placeholder="Precio del producto" required class="inputs"
+                    value="<?= htmlspecialchars($precio ?? '') ?>">
+                <input type="number" name="quantity" placeholder="Cantidad" required class="inputs"
+                    value="<?= htmlspecialchars($cantidad ?? '') ?>">
+                <input type="number" name="category_id" placeholder="ID de la categoría" required class="inputs"
+                    value="<?= htmlspecialchars($categoria_id ?? '') ?>">
                 <button type="submit" value="Insertar" class="buttons w-full">Insertar</button>
             </form>
 

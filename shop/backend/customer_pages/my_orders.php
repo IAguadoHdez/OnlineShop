@@ -13,7 +13,7 @@ $stmt = $conn->prepare("
     SELECT *
     FROM 002orders
     WHERE customer_id = ?
-    ORDER BY placed_on DESC
+    ORDER BY order_id DESC
 ");
 $stmt->bind_param("i", $customer_id);
 $stmt->execute();

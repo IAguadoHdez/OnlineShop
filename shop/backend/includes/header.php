@@ -45,7 +45,7 @@
         <a href="/student002/shop/backend/admin_pages/products.php" class="links"> Productos </a>
 
         <?php if ($role === 'admin'): ?>
-
+          <a href="/student002/shop/backend/admin_pages/reviews.php" class="links">Revisar Reviews</a>
           <a href="/student002/shop/backend/admin_pages/customers.php" class="links"> Clientes </a>
           <a href="/student002/shop/backend/admin_pages/orders.php" class="links"> Pedidos </a>
         <?php endif; ?>

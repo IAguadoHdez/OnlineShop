@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function fetchOrders(query = "") {
     try {
       const url =
-        "/student002/shop/backend/endpoints/searchOrders.php?q=" +
-        encodeURIComponent(query);
+        "/student002/shop/backend/endpoints/searchOrders.php?q=" + encodeURIComponent(query);
 
       const response = await fetch(url);
 

@@ -1,6 +1,6 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/db/products/db_product_delete.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/header.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/student002/shop/backend/includes/header.php';
 
 $id = $_POST['product_id'];
 $confirmado = $_POST['confirmar'] ?? null;
