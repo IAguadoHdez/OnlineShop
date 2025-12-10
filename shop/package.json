@@ -6,6 +6,4 @@
   "scripts": {
     "watch": "tailwindcss -i ./css/index.css -o ./css/output.css --watch"
   }
-
-
 }
